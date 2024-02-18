@@ -1,4 +1,4 @@
-const lesson = () => {
+const Lesson = () => {
 
     return (
         <div className="py-5">
@@ -13,4 +13,4 @@ const lesson = () => {
     );
 }
 
-export default lesson;
+export default Lesson;
