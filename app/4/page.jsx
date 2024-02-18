@@ -9,7 +9,7 @@ const lesson = () => {
             <div>
                 <h2>JavaScript</h2>
                 <p>
-                    JavaScript (JS) est un langage de programmation standard utilisé pour créer du contenu dynamique sur les sites web. Il est largement utilisé pour manipuler le Document Object Model (DOM), gérer les événements, créer des animations, effectuer des requêtes HTTP, et bien plus encore. JavaScript est interprété par le navigateur.
+                    JavaScript {`(JS)`} est un langage de programmation standard utilisé pour créer du contenu dynamique sur les sites web. Il est largement utilisé pour manipuler le Document Object Model {`(DOM)`}, gérer les événements, créer des animations, effectuer des requêtes HTTP, et bien plus encore. JavaScript est interprété par le navigateur.
                     <br /><br />
                     Voici un exemple simple de JavaScript qui crée un élément h1, lui ajoute du texte, puis l'ajoute au corps de la page.
                 </p>
@@ -22,7 +22,7 @@ document.body.appendChild(h1);`}
             <div id="4-2">
                 <h2>JSX</h2>
                 <p>
-                    JSX (JavaScript XML), quant à lui, est une extension de syntaxe pour JavaScript. Il est principalement utilisé avec React, une bibliothèque JavaScript pour la construction d'interfaces utilisateur. JSX ressemble à HTML, mais il est intégré dans du JavaScript. Cela permet aux développeurs d'écrire des balises et des composants HTML-like directement dans leur code JavaScript.
+                    JSX {`(JavaScript XML)`}, quant à lui, est une extension de syntaxe pour JavaScript. Il est principalement utilisé avec React, une bibliothèque JavaScript pour la construction d'interfaces utilisateur. JSX ressemble à HTML, mais il est intégré dans du JavaScript. Cela permet aux développeurs d'écrire des balises et des composants HTML-like directement dans leur code JavaScript.
                     <br /><br />
                     Voici un exemple de JSX qui crée un élément h1 avec du texte et le rend dans un composant / une page.
                 </p>

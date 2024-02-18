@@ -10,7 +10,7 @@ const lesson = () => {
             <div>
                 <h2>Server components</h2>
                 <p>
-                    Les Server Components sont des éléments d'interface utilisateur (UI) qui sont rendus côté serveur et envoyés au client sous forme de HTML. Les Server Components sont exécutés sur le serveur et peuvent interagir avec des ressources telles que des bases de données, des API externes, ou d'autres services back-end. <u>Par défault, les composants sont rendus côté serveur.</u>
+                    Les Server Components sont des éléments d'interface utilisateur {`(UI)`} qui sont rendus côté serveur et envoyés au client sous forme de HTML. Les Server Components sont exécutés sur le serveur et peuvent interagir avec des ressources telles que des bases de données, des API externes, ou d'autres services back-end. <u>Par défault, les composants sont rendus côté serveur.</u>
                     <br /><br />
                     <span className="font-semibold">Le rendu côté serveur offre plusieurs avantages :</span>
                 </p>
@@ -80,12 +80,12 @@ export default function Page() {
                             <td><RxCrossCircled className="bad" /></td>
                         </tr>
                         <tr>
-                            <td>Accéder aux ressources du backend (directement)</td>
+                            <td>Accéder aux ressources du backend {`(directement)`}</td>
                             <td><GrStatusGood className="good" /></td>
                             <td><RxCrossCircled className="bad" /></td>
                         </tr>
                         <tr>
-                            <td>Conserver les informations sensibles sur le serveur (jetons d'accès, clés API, etc.)</td>
+                            <td>Conserver les informations sensibles sur le serveur {`(jetons d'accès, clés API, etc.)`}</td>
                             <td><GrStatusGood className="good" /></td>
                             <td><RxCrossCircled className="bad" /></td>
                         </tr>
@@ -95,12 +95,12 @@ export default function Page() {
                             <td><RxCrossCircled className="bad" /></td>
                         </tr>
                         <tr>
-                            <td>Ajouter de l'interactivité et des écouteurs d'événements (onClick(), onChange(), etc.)</td>
+                            <td>Ajouter de l'interactivité et des écouteurs d'événements {`(onClick(), onChange(), etc.)`}</td>
                             <td><RxCrossCircled className="bad" /></td>
                             <td><GrStatusGood className="good" /></td>
                         </tr>
                         <tr>
-                            <td>Utiliser State et Lifecycle Effects (useState(), useReducer(), useEffect(), etc.)</td>
+                            <td>Utiliser State et Lifecycle Effects {`(useState(), useReducer(), useEffect(), etc.)`}</td>
                             <td><RxCrossCircled className="bad" /></td>
                             <td><GrStatusGood className="good" /></td>
                         </tr>

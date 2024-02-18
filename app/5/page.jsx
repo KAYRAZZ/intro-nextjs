@@ -20,7 +20,7 @@ const lesson = () => {
           Dans cet exemple, <mark>{`<h1>Hello World!</h1>`}</mark> est une expression JSX qui représente un élément HTML h1.
           <br /><br />
 
-          Vous pouvez insérer des expressions JavaScript dans votre JSX en les mettant entre accolades { }. Par exemple :
+          Vous pouvez insérer des expressions JavaScript dans votre JSX en les mettant entre accolades {`{ }`}. Par exemple :
         </p>
         <FormatToCode language="jsx">
           {`export default function Page() {
@@ -33,7 +33,7 @@ const lesson = () => {
           Dans cet exemple, <mark>{`{name}`}</mark> est une expression JavaScript qui est évaluée et insérée dans le JSX.
           <br /><br />
 
-          Vous pouvez également écrire plusieurs lignes. Pour cela, vous devez les imbriquer entre parenthèses <mark>( )</mark>. Quand il n'y a qu'une seule ligne, les parenthèses ne sont pas nécessaires mais peuvent être utilisées pour améliorer la lisibilité.
+          Vous pouvez également écrire plusieurs lignes. Pour cela, vous devez les imbriquer entre parenthèses <mark>{`( )`}</mark>. Quand il n'y a qu'une seule ligne, les parenthèses ne sont pas nécessaires mais peuvent être utilisées pour améliorer la lisibilité.
         </p>
         <FormatToCode language="jsx">
           {`export default function Page() {

@@ -41,7 +41,7 @@ const lesson = () => {
           Les Hooks ne fonctionnent que dans les fonctions, ils ne fonctionnent pas dans les classes. Ils offrent une alternative plus simple. Il existe plusieurs hooks, parmis les plus utilisés, il y a <mark>useState</mark>, <mark>useEffect</mark> et <mark>useRef</mark>.
 
           <br /><br />
-          Mais il y a un élément à prendre, le <mark>render</mark>. Le rendu (ou "render" en anglais) est un concept central en React. Il s'agit du processus par lequel React met à jour le DOM (Document Object Model) de la page web avec le contenu de vos composants. Le rendu est déclenché par des changements d'état ou de propriétés, et il est ce qui permet à votre application de réagir aux interactions de l'utilisateur. React appelle la méthode render à chaque fois qu'il doit mettre à jour le DOM pour ce composant. Cela peut se produire pour plusieurs raisons, par exemple si les props du composant changent, si l'état du composant change (avec useState dans un composant fonctionnel), ou si le composant est rendu pour la première fois.
+          Mais il y a un élément à prendre, le <mark>render</mark>. Le rendu {`(ou "render" en anglais)`} est un concept central en React. Il s'agit du processus par lequel React met à jour le DOM {`(Document Object Model)`} de la page web avec le contenu de vos composants. Le rendu est déclenché par des changements d'état ou de propriétés, et il est ce qui permet à votre application de réagir aux interactions de l'utilisateur. React appelle la méthode render à chaque fois qu'il doit mettre à jour le DOM pour ce composant. Cela peut se produire pour plusieurs raisons, par exemple si les props du composant changent, si l'état du composant change {`(avec useState dans un composant fonctionnel)`}, ou si le composant est rendu pour la première fois.
 
 
         </p>
@@ -85,9 +85,9 @@ export default function Page() {
           Pour l'utiliser, il faut mettre un <mark>getter</mark> et un <mark>setter</mark>. Le getter est la valeur de l'état, et le setter est la fonction qui permet de modifier l'état. La convention est de mettre le mot <mark>set</mark> suivi du nom de la variable d'état.
           <br /><br />
 
-          Dans cet exemple, <mark>useState(0)</mark> déclare une nouvelle variable d'état <mark>(count)</mark> initialisée à 0. <mark>useState(0)</mark> renvoie un tableau contenant deux éléments : la valeur actuelle de l'état <mark>(count)</mark> et une fonction pour le mettre à jour <mark>(setCount)</mark>.
+          Dans cet exemple, <mark>useState{`(0)`}</mark> déclare une nouvelle variable d'état <mark>{`(count)`}</mark> initialisée à 0. <mark>useState{`(0)`}</mark> renvoie un tableau contenant deux éléments : la valeur actuelle de l'état <mark>{`(count)`}</mark> et une fonction pour le mettre à jour <mark>{`(setCount)`}</mark>.
 
-          Lorsque vous cliquez sur le bouton, la fonction <mark>setCount</mark> est appelée avec la nouvelle valeur de count <mark>(count + 1)</mark>. Cela déclenche une nouveau render du composant avec la nouvelle valeur de count afin d'actualiser l'interface utilisateur.
+          Lorsque vous cliquez sur le bouton, la fonction <mark>setCount</mark> est appelée avec la nouvelle valeur de count <mark>{`(count + 1)`}</mark>. Cela déclenche une nouveau render du composant avec la nouvelle valeur de count afin d'actualiser l'interface utilisateur.
           <br /><br />
 
           Vous pouvez utiliser useState plusieurs fois dans un même composant pour déclarer plusieurs variables d'état.
@@ -135,7 +135,7 @@ export default function Page() {
         <p>
           Dans cet exemple, nous avons une fonction <mark>handleClick</mark> qui est appelée lorsqu'on clique sur le bouton. Cette fonction appelle trois fois la fonction <mark>setCount</mark> pour incrémenter la valeur de <mark>count</mark> de 1. Mais cela ne s'incrémente pas de <mark>3</mark> mais <mark>1</mark>. Cela est dû au fait que <mark>setCount</mark> est asynchrone. Lorsqu'on appelle <mark>setCount</mark>, React ne met pas à jour immédiatement la valeur de <mark>count</mark>.
           <br /><br />
-          Donc, si vous appelez <mark>setCount(count + 1)</mark> plusieurs fois dans le même rendu, <u>chaque appel utilise la même valeur de count, qui est la valeur de count au début de ce rendu.</u> C'est pour cela que la valeur de <mark>count</mark> est incrémentée de <mark>1</mark> et non de <mark>3</mark>.
+          Donc, si vous appelez <mark>setCount{`(count + 1)`}</mark> plusieurs fois dans le même rendu, <u>chaque appel utilise la même valeur de count, qui est la valeur de count au début de ce rendu.</u> C'est pour cela que la valeur de <mark>count</mark> est incrémentée de <mark>1</mark> et non de <mark>3</mark>.
           <br /><br />
           Si vous voulez augmenter count de plus de 1, vous pouvez soit appeler setCount avec la valeur finale que vous voulez, soit utiliser la forme de fonction de setCount, qui reçoit l'état précédent comme argument et renvoie le nouvel état. Voici comment vous pouvez l'utiliser :
         </p>
