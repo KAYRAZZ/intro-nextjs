@@ -5,7 +5,7 @@ import { ImLoop2 } from "react-icons/im";
 
 let letCount = 0;
 
-const lesson = () => {
+const Lesson = () => {
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
   const [count3, setCount3] = useState(0);
@@ -199,4 +199,4 @@ export default function Page() {
   );
 }
 
-export default lesson;
+export default Lesson;

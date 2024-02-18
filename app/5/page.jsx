@@ -1,6 +1,6 @@
 import FormatToCode from "../components/FormatToCode";
 
-const lesson = () => {
+const Lesson = () => {
 
   return (
     <div id="5-1" className="py-5">
@@ -110,4 +110,4 @@ const lesson = () => {
   );
 }
 
-export default lesson;
+export default Lesson;

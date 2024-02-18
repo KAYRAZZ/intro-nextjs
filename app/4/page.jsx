@@ -1,7 +1,6 @@
-import React from 'react';
 import FormatToCode from '../components/FormatToCode';
 
-const lesson = () => {
+const Lesson = () => {
 
     return (
         <div id="4-1" className="py-5">
@@ -46,4 +45,4 @@ document.body.appendChild(h1);`}
     );
 }
 
-export default lesson;
+export default Lesson;

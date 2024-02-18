@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const lesson = () => {
+const Lesson = () => {
 
     return (
         <div id="3-1" className="py-5">
@@ -36,4 +36,4 @@ const lesson = () => {
     );
 }
 
-export default lesson;
+export default Lesson;

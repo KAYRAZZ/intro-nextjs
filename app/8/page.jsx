@@ -2,7 +2,7 @@ import FormatToCode from "../components/FormatToCode";
 import { GrStatusGood } from "react-icons/gr";
 import { RxCrossCircled } from "react-icons/rx";
 
-const lesson = () => {
+const Lesson = () => {
 
     return (
         <div id="8-1" className="py-5">
@@ -126,4 +126,4 @@ export default function Page() {
     );
 }
 
-export default lesson;
+export default Lesson;
