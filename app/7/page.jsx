@@ -24,7 +24,7 @@ const Lesson = () => {
                     Les routes dynamiques sont utilisées pour créer des pages qui ont des paramètres variables dans leur URL. C'est utile lorsque vous voulez créer plusieurs URL qui partagent la même structure de page.
 
 
-                    Dans le dossier <mark>app</mark>, il est nécessaire de créer un dossier avec des crochets <mark>{`[ ]`}</mark> dont le nom sera le paramètre à récupérer. Par exemple, <mark>app/posts/{`[post]`}/page.js</mark>, les crochets indiquent que cette partie de l'URL est dynamique. C'est-à-dire qu'on va pouvoir accéder à cette route avec plusieurs valeurs pour <mark>post</mark>.
+                    Dans le dossier <mark>app</mark>, il est nécessaire de créer un dossier avec des crochets <mark>{"[ ]"}</mark> dont le nom sera le paramètre à récupérer. Par exemple, <mark>app/posts/{"[post]"}/page.js</mark>, les crochets indiquent que cette partie de l'URL est dynamique. C'est-à-dire qu'on va pouvoir accéder à cette route avec plusieurs valeurs pour <mark>post</mark>.
                 </p>
 
                 <table className="tracking-wider">
@@ -37,17 +37,17 @@ const Lesson = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>app/posts/{`[post]`}/page.js</td>
+                            <td>app/posts/{"[post]"}/page.js</td>
                             <td>/posts/a</td>
                             <td>{'{ post: "a" }'}</td>
                         </tr>
                         <tr>
-                            <td>app/posts/{`[post]`}/page.js	</td>
+                            <td>app/posts/{"[post]"}/page.js	</td>
                             <td>/posts/b	</td>
                             <td>{'{ post: "b" }'}</td>
                         </tr>
                         <tr>
-                            <td>app/posts/{`[post]`}/page.js</td>
+                            <td>app/posts/{"[post]"}/page.js</td>
                             <td>/posts/c</td>
                             <td>{'{ post: "c" }'}</td>
                         </tr>
