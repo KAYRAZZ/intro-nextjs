@@ -1,8 +1,14 @@
-const FormatToCode = ({ children }) => {
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
+const FormatToCode = ({ children, language }) => {
+
     return (
-        <pre>
-            <code>{children}</code>
-            <span className="bg-black">test</span>
-        </pre>
+
+        <SyntaxHighlighter language={language} style={coldarkDark} showLineNumbers={true}>
+            {children}
+        </SyntaxHighlighter>
     );
 }
+
+export default FormatToCode;

@@ -1,3 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    /* Border */
+    --secondary: #00a6ff;
+    /* Text h2 */
+    --text: #0087d0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: min(3.7vw, 1.3rem);
+    font-weight: 400;
+    background: rgb(9, 0, 22);
+    background: linear-gradient(145deg, rgba(9, 0, 22, 1) 0%, rgba(21, 0, 46, 1) 50%, rgba(9, 0, 22, 1) 100%) fixed;
+    color: white;
+    line-height: 35px;
+    letter-spacing: .6px !important;
+}
+
+.sidebar {
+    left: -110%;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 7px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(128, 31, 255, 0.5);
+}
+
+h1 {
+    font-size: min(7vw, 3.4rem);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    background: rgb(153, 76, 255);
+    background: linear-gradient(135deg, rgba(153, 76, 255, 1) 0%, rgba(132, 166, 255, 1) 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 50px;
+}
+
+h2 {
+    font-size: min(5vw, 1.8rem);
+    font-weight: 700;
+    margin: 20px 0;
+    color: var(--text);
+}
+
+h2::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #b2aeff;
+    margin: min(5vw, 55px) auto;
+}
+
+pre {
+    margin: 35px 0 !important;
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+}
+
+pre::-webkit-scrollbar {
+    height: 8px;
+}
+
+pre::-webkit-scrollbar-track {
+    background: #111b27;
+    border-radius: 50%;
+}
+
+pre::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(128, 31, 255, 0.5);
+}
+
+.sandBox {
+    position: relative;
+    background: #111b27;
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 35px 0;
+}
+
+button {
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+    padding: 4px 8px;
+    margin: 3px;
+}
+
+button:active {
+    background: var(--secondary);
+}
+
+mark {
+    position: relative;
+    display: inline-block;
+    background: none;
+    color: white;
+    padding: 2px 8px;
+}
+
+mark::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 95%;
+    border-radius: 10px;
+    background: #00d9ff3a;
+    border: 2px solid var(--secondary);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(9, 0, 22);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgb(153, 76, 255);
+    background: linear-gradient(45deg, rgba(153, 76, 255, 1) 0%, rgb(120, 158, 255) 70%);
+}
+
+img {
+    border: 2px solid var(--secondary);
+    border-radius: 3px;
+}
+
+.tab {
+    height: 500px;
+    line-height: 25px !important;
+    text-align: center;
+}
+
+.tab tr {
+    border-bottom: 2px solid var(--secondary);
+    margin: 10px 0;
+    /* display: flex;
+    flex-direction: row; */
+}
+
+.tab :is(td, th) {
+    padding: 10px 20px;
+}
+
+.tab td svg {
+    margin: auto;
+}
+
+.good {
+    color: #00ff00;
+}
+
+.bad {
+    color: #ff0000;
+}
