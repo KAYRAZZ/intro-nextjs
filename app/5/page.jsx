@@ -1,4 +1,5 @@
 import FormatToCode from "../components/FormatToCode";
+import Solution from "../components/Solution";
 
 const Lesson = () => {
 
@@ -104,9 +105,50 @@ const Lesson = () => {
   );
 }`}
         </FormatToCode>
-
       </div>
-    </div >
+
+      <div>
+        <h2>Exercice</h2>
+        <p>
+          L'objectif est d'afficher <mark>un article</mark> dans une balise <mark>{"<h2>"}</mark> avec comme texte <mark>"Panier : {'<'}nom de l'article{'>'}"</mark> si la variable <mark>article</mark> est <mark>définie/non null</mark>, sinon afficher <mark>"Le panier est vide"</mark>. Ensuite, afficher un <mark>{"<span>"}</mark> avec le texte <mark>"Le produit a été fabriqué en France"</mark> si la variable <mark>fabrication</mark> est égale à <mark>"France"</mark>.
+          <br /><br />
+          A partir du fichier Exo1.jsx recréer ce code écrit en JavaScript en JSX :
+        </p>
+      </div>
+
+      <FormatToCode language="jsx">
+        {`let article = 'Table';
+let fabrication = 'France';
+const h2 = document.createElement('h2');
+const span = document.createElement('span');
+
+if (article) {
+  h2.innerText = 'Panier : ' + article;
+} else {
+  h2.innerText = 'Le panier est vide';
+}
+if (fabrication == "France") {
+  span.innerText = 'Le produit a été fabriqué en France';
+}`}
+      </FormatToCode>
+
+      <Solution>
+        <FormatToCode language="jsx">
+          {`export default function Exo1() {
+  let article = 'Table';
+  let fabrication = 'France';
+
+  return (
+    <>
+      <h1>Mon panier</h1>
+      {article ? (<h2>Panier : {article}</h2>) : <h2>Le panier est vide</h2>}
+      {fabrication == "France" && <span>Le produit a été fabriqué en France</span>}
+    </>
+  );
+}`}
+        </FormatToCode>
+      </Solution>
+    </div>
   );
 }
 
