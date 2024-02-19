@@ -178,7 +178,7 @@ export default function Page() {
 }`}
         </FormatToCode>
         <div className="sandBox">
-          <ImLoop2 onClick={() => handleReset4} className="absolute right-0 top-[20px] cursor-pointer -translate-y-2/4 -translate-x-2/4 rotate-0 hover:rotate-180 transition-all duration-[350ms]" />
+          <ImLoop2 onClick={handleReset4} className="absolute right-0 top-[20px] cursor-pointer -translate-y-2/4 -translate-x-2/4 rotate-0 hover:rotate-180 transition-all duration-[350ms]" />
           <p>Variable : {letCount}</p>
           <p>useState : {useStateCount}</p>
           <button onClick={handleClickLet}>Incrémente la variable</button>
