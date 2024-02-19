@@ -30,7 +30,7 @@ const Lesson = () => {
   }
 
   const handleReset4 = () => {
-    setCount4(0);
+    setUseStateCount(0);
     letCount = 0;
   }
 
