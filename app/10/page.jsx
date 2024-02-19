@@ -9,7 +9,6 @@ const Lesson = () => {
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
   const [count3, setCount3] = useState(0);
-  const [count4, setCount4] = useState(0);
 
   const [useStateCount, setUseStateCount] = useState(0);
 
@@ -24,10 +23,15 @@ const Lesson = () => {
     setCount3(prevCount => prevCount + 1);
   }
   const handleClickUseState = () => {
-    setUseStateCount(count4 + 1);
+    setUseStateCount(useStateCount + 1);
   }
   const handleClickLet = () => {
     letCount = letCount + 1;
+  }
+
+  const handleReset4 = () => {
+    setCount4(0);
+    letCount = 0;
   }
 
   return (
@@ -174,7 +178,7 @@ export default function Page() {
 }`}
         </FormatToCode>
         <div className="sandBox">
-          <ImLoop2 onClick={() => setCount3(0)} className="absolute right-0 top-[20px] cursor-pointer -translate-y-2/4 -translate-x-2/4 rotate-0 hover:rotate-180 transition-all duration-[350ms]" />
+          <ImLoop2 onClick={() => handleReset4} className="absolute right-0 top-[20px] cursor-pointer -translate-y-2/4 -translate-x-2/4 rotate-0 hover:rotate-180 transition-all duration-[350ms]" />
           <p>Variable : {letCount}</p>
           <p>useState : {useStateCount}</p>
           <button onClick={handleClickLet}>Incrémente la variable</button>
