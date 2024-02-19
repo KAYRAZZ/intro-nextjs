@@ -31,7 +31,7 @@ const Lesson = () => {
   }
 
   return (
-    <div id="10-1" className="py-5">
+    <div id="1" className="py-5">
       <h1>Les hooks</h1>
       <div>
         <h2>Qu'est-ce qu'un hook</h2>
@@ -46,7 +46,7 @@ const Lesson = () => {
 
         </p>
       </div>
-      <div id="10-2">
+      <div id="2">
         <h2>useState</h2>
         <p>
           <mark>useState</mark> est un Hook dans React qui vous permet d'ajouter un état local à un composant fonctionnel. L'état est une valeur que le composant peut maintenir, modifier et utiliser pour rendre son interface utilisateur.
@@ -186,13 +186,83 @@ export default function Page() {
         </p>
       </div>
 
-      <div id="10-3">
+
+      <div id="3">
         <h2>useEffect</h2>
         <p>
-          <mark>useEffect</mark> est un hook qui permet d'effectuer des effets de bord dans un composant fonctionnel. Il est importé depuis la bibliothèque <mark>react</mark>. Voici un exemple d'utilisation de <mark>useEffect</mark> :
+          <mark>useEffect</mark> est un hook qui permet d'effectuer des effets de bord dans un composant fonctionnel. Il est importé depuis la bibliothèque <mark>react</mark>.
+        </p>
+        <FormatToCode language="jsx">
+          {`import { useEffect } from 'react';`}
+        </FormatToCode>
+        <p>
+          Il existe plusieurs cas d'utilisation de <mark>useEffect</mark>.
+          <br /><br />
+          <span className="font-semibold">Cas n°1 :</span>
+        </p>
+        <FormatToCode language="jsx">
+          {`useEffect(() => {
+  console.log("Je suis exécuté à chaque rendu")
+})`}
+        </FormatToCode>
+        <p>
+          Dans cet exemple, <mark>useEffect</mark> est <u>appelé à chaque rendu du composant</u> et après chaque mise à jour du DOM. Cela peut être utile pour réaliser des certaines actions, telles que le déclenchement d'une minuterie, l'écoute des événements du clavier, la récupération de données depuis une API, et bien plus encore.
+          <br /><br />
+          <span className="font-semibold">Cas n°2 :</span>
+        </p>
+        <FormatToCode language="jsx">
+          {`useEffect(() => {
+  console.log("Je suis exécuté qu'une seule fois (Mount)") 
+}, [])`}
+        </FormatToCode>
+        <p>
+          Dans cet exemple, <mark>useEffect</mark> est <u>appelé qu'une seule fois</u>, lors du le premier rendu du composant. Cela peut être utile pour effectuer des effets de bord qui ne doivent être exécutés qu'une seule fois, comme la récupération de données, etc.
+
+          <br /><br />
+          <span className="font-semibold">Cas n°3 :</span>
 
         </p>
+        <FormatToCode language="jsx">
+          {`const [count, setCount] = useState(0);
 
+useEffect(() => {
+  console.log('Je suis exécuté à chaque fois que la valeur Count change')
+}, [count])`}
+        </FormatToCode>
+        <p>
+          Dans cet exemple, <mark>useEffect</mark> est <u>appelé à chaque fois</u> que la valeur <mark>count</mark> change. C'est une syntaxe qui permet d'écouteur les changements d'état.
+          <br /><br />
+
+          <mark>useEffect</mark> peut être utilisé plusieurs fois dans un même composant pour effectuer plusieurs effets de bord.
+
+          <br /><br />
+          Si l'on souhaite récupérer des données depuis une API, on peut utiliser <mark>useEffect</mark>. Voici un exemple :
+        </p>
+        <FormatToCode language="jsx">
+          {`import { useState, useEffect } from 'react';
+
+function Example() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await fetch('https://api.example.com/data');
+      setData(result.data);
+    };
+
+    fetchData();
+  }, []); // Le tableau vide signifie que l'effet ne s'exécute qu'au montage du composant
+
+  return (
+    <div>
+      {data ? \`Les données reçues sont : \${data}\` : 'Chargement...'}
+    </div>
+  );
+}`}
+        </FormatToCode>
+        <p>
+          Dans cet exemple, <mark>useEffect</mark> effectue une requête et met à jour l'état local <mark>data</mark> avec les données reçues. Le tableau vide signifie que l'effet ne s'exécute qu'au montage du composant. Ensuite, le composant est rendu avec les données reçues, ou avec le message "Chargement..." s'il n'y a pas encore de données.
+        </p>
 
       </div>
     </div >

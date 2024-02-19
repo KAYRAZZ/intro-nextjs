@@ -12,7 +12,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link async defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css"></link>
-
       </head>
       <body className="relative md:min-h-screen">
         <Nav />

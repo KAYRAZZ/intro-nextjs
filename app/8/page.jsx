@@ -5,7 +5,7 @@ import { RxCrossCircled } from "react-icons/rx";
 const Lesson = () => {
 
     return (
-        <div id="8-1" className="py-5">
+        <div id="1" className="py-5">
             <h1>Les server/client components</h1>
             <div>
                 <h2>Server components</h2>
@@ -30,7 +30,7 @@ const Lesson = () => {
 
             </div>
 
-            <div id="8-2">
+            <div id="2">
                 <h2>Client components</h2>
                 <p>
                     Les Client Componants sont des composants qui sont rendus côté client. Ils sont utilisés pour les pages qui changent souvent. Les Client Componants vous permettent de faire des interfaces utilisateur interactive.
@@ -60,7 +60,7 @@ export default function Page() {
                 </ol>
             </div>
 
-            <div id="8-3">
+            <div id="3">
                 <h2>Résumé</h2>
                 <p>
                     Voici un tableau qui résume les différences entre les deux types de composants.

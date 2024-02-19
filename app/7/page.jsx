@@ -3,7 +3,7 @@ import FormatToCode from "../components/FormatToCode";
 const Lesson = () => {
 
     return (
-        <div id="7-1" className="py-5">
+        <div id="1" className="py-5">
             <h1>Créer une page / route</h1>
             <div>
                 <h2>Créer une page statique</h2>
@@ -18,7 +18,7 @@ const Lesson = () => {
 };`}
                 </FormatToCode>
             </div>
-            <div id="7-2">
+            <div id="2">
                 <h2>Créer une route dynamique</h2>
                 <p>
                     Les routes dynamiques sont utilisées pour créer des pages qui ont des paramètres variables dans leur URL. C'est utile lorsque vous voulez créer plusieurs URL qui partagent la même structure de page.

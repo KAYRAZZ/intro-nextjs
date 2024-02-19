@@ -3,7 +3,7 @@ import FormatToCode from "../components/FormatToCode";
 const Lesson = () => {
 
   return (
-    <div id="5-1" className="py-5">
+    <div id="1" className="py-5">
       <h1>Utiliser le JSX</h1>
       <div>
         <h2>Les différentes façon d'utiliser le JSX</h2>
@@ -54,7 +54,7 @@ const Lesson = () => {
         </p>
       </div>
 
-      <div id="5-2">
+      <div id="2">
         <h2>Opérateur ternaire en JSX</h2>
         <p>
           L'opérateur ternaire vous permet d'afficher différents éléments en fonction de certaines conditions. Si vous souhaitez utiliser des conditions dans le JSX, il faut utiliser <u>la méthode ternaire</u>. Les opérateurs JavaScript tels que <mark>{"if else"}</mark> ne fonctionneront pas. L'opérateur <mark>if</mark> est remplacé par <mark>?</mark> et l'opérateur <mark>else</mark> est remplacé par <mark>:</mark>.

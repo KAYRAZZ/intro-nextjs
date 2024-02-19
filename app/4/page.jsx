@@ -3,7 +3,7 @@ import FormatToCode from '../components/FormatToCode';
 const Lesson = () => {
 
     return (
-        <div id="4-1" className="py-5">
+        <div id="1" className="py-5">
             <h1>Les extensions</h1>
             <div>
                 <h2>JavaScript</h2>
@@ -18,7 +18,7 @@ h1.textContent = 'Hello World!';
 document.body.appendChild(h1);`}
                 </FormatToCode>
             </div>
-            <div id="4-2">
+            <div id="2">
                 <h2>JSX</h2>
                 <p>
                     JSX {"(JavaScript XML)"}, quant à lui, est une extension de syntaxe pour JavaScript. Il est principalement utilisé avec React, une bibliothèque JavaScript pour la construction d'interfaces utilisateur. JSX ressemble à HTML, mais il est intégré dans du JavaScript. Cela permet aux développeurs d'écrire des balises et des composants HTML-like directement dans leur code JavaScript.
@@ -30,7 +30,7 @@ document.body.appendChild(h1);`}
                 </FormatToCode>
             </div>
             <div>
-                <h2 id="4-3">La différence entre JS et JSX</h2>
+                <h2 id="3">La différence entre JS et JSX</h2>
                 <p>
                     La différence entre les extensions de fichiers <mark>.js</mark> et <mark>.jsx</mark> réside principalement dans la façon dont le code est traité par les outils de développement.
                     <br /><br />

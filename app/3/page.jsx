@@ -3,7 +3,7 @@ import Image from 'next/image';
 const Lesson = () => {
 
     return (
-        <div id="3-1" className="py-5">
+        <div id="1" className="py-5">
             <h1>Installer et lancer un projet de Next.js</h1>
             <div>
                 <h2>Installer Next.js (à ne pas réaliser)</h2>
@@ -20,7 +20,7 @@ const Lesson = () => {
 
             </div>
 
-            <div id="3-2">
+            <div id="2">
                 <h2>Lancer un projet Next.js</h2>
                 <p>
                     Après avoir installé le projet, à partir du terminal, il faut se placer à la racine du projet Next.js avec tous ces dossiers et fichiers, pour taper la commande suivante, qui démarrera le projet <mark>npm run dev</mark> Le processus de démarrage du serveur de développement de Next.js peut prendre quelques instants. Vous verrez des messages dans votre terminal indiquant que le serveur est en cours de démarrage et la disponibilité de l'application.

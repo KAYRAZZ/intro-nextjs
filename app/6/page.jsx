@@ -3,7 +3,7 @@ import FormatToCode from "../components/FormatToCode";
 const Lesson = () => {
 
   return (
-    <div id="6-1" className="py-5">
+    <div id="1" className="py-5">
       <h1>Les composants</h1>
       <div>
         <h2>Qu'est-ce qu'un composant</h2>
@@ -20,7 +20,7 @@ const Lesson = () => {
 }`}
         </FormatToCode>
       </div>
-      <div id="6-2">
+      <div id="2">
         <h2>Comment utiliser les composants</h2>
         <p>
           Les composants peuvent être utilisés dans d'autres composants ou dans d'autres pages. Voici une exemple, à partir du composant <mark>MonBouton</mark>.

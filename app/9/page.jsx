@@ -3,7 +3,7 @@ import FormatToCode from "../components/FormatToCode";
 const Lesson = () => {
 
   return (
-    <div id="9-1" className="py-5">
+    <div id="1" className="py-5">
       <h1>Les gestionnaires d'événements</h1>
       <div>
         <h2>Qu'est-ce qu'un gestionnaire d'événement</h2>
@@ -12,7 +12,7 @@ const Lesson = () => {
         </p>
       </div>
 
-      <div id="9-2">
+      <div id="2">
         <h2>onClick</h2>
         <p>
           <mark>onClick</mark> est un gestionnaire d'événement qui est appelé lorsque l'utilisateur clique sur un élément. Voici un exemple d'utilisation avec une fonction fléchée :
@@ -64,7 +64,7 @@ const Lesson = () => {
         </FormatToCode>
       </div>
 
-      <div id="9-3">
+      <div id="3">
         <h2>onChange</h2>
         <p>
           <mark>onChange</mark> est un gestionnaire d'événement qui est appelé lorsque la valeur d'un élément change. Voici un exemple d'utilisation avec une fonction fléchée :
