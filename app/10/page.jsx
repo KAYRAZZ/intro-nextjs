@@ -251,7 +251,8 @@ function Example() {
   useEffect(() => {
     const fetchData = async () => {
       const result = await fetch('https://api.example.com/data');
-      setData(result.data);
+      const data = await result.json();
+      setData(data);
     };
 
     fetchData();

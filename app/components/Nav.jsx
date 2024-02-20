@@ -10,80 +10,22 @@ const SideNav = () => {
     const [activeMenu, setActiveMenu] = useState(null);
     const pathname = usePathname()
     const router = useRouter();
+    const [menus, setMenus] = useState([]);
 
-    const menus = [
-        { title: "Qu'est-ce que Next.js ?", lesson: "1" },
-        { title: "Pourquoi utiliser Next.js ?", lesson: "2" },
-        {
-            title: "Installer et lancer un projet de Next.js", lesson: "3",
-            subMenus: [
-                { title: "Installer Next.js (ne pas réaliser)", lesson: "1" },
-                { title: "Lancer un projet Next.js", lesson: "2" }
-            ]
-        },
-        {
-            title: "Les extensions", lesson: "4",
-            subMenus: [
-                { title: "JavaScript", lesson: "1" },
-                { title: "JSX", lesson: "2" },
-                { title: "La différence entre JS et JSX", lesson: "3" }
-            ]
-        },
-        {
-            title: "Utiliser le JSX", lesson: "5",
-            subMenus: [
-                { title: "Les différentes façon d'utiliser le JSX", lesson: "1" },
-                { title: "Opérateur ternaire en JSX", lesson: "2" }
-            ]
-        },
-        {
-            title: "Les composants", lesson: "6",
-            subMenus: [
-                { title: "Qu'est-ce qu'un composant", lesson: "1" },
-                { title: "Comment utiliser les composants", lesson: "2" }
-            ]
-        },
-        {
-            title: "Créer une page / route", lesson: "7",
-            subMenus: [
-                { title: "Créer une page statique", lesson: "1" },
-                { title: "Créer une page dynamique", lesson: "2" }
-            ]
-        },
-        {
-            title: "Les server/client components", lesson: "8",
-            subMenus: [
-                { title: "Server components", lesson: "1" },
-                { title: "Client components", lesson: "2" },
-                { title: "Résumé", lesson: "3" },
-            ]
-        },
-        {
-            title: "Les gestionnaires d'événements", lesson: "9",
-            subMenus: [
-                { title: "Qu'est-ce qu'un gestionnaire d'événement", lesson: "1" },
-                { title: "onClick", lesson: "2" },
-                { title: "onChange", lesson: "3" },
-            ]
-        },
-        {
-            title: "Les hooks", lesson: "10",
-            subMenus: [
-                { title: "Qu'est-ce qu'un hook", lesson: "1" },
-                { title: "useState", lesson: "1" },
-                { title: "useEffect", lesson: "3" },
-                { title: "useRef", lesson: "4" },
-            ]
-        },
-    ];
+    useEffect(() => {
+        const fetchMenus = async () => {
+            const response = await fetch('http://localhost:3000/nav.json');
+            const data = await response.json();
+            setMenus(data);
+            setHeights(data && data.map(() => '0px'));
+        }
+        fetchMenus();
+    }, []);
+
 
 
     const handleMenuClick = (index, menu) => {
-        if (activeMenu === index) {
-            setActiveMenu(null);
-        } else {
-            setActiveMenu(index);
-        }
+        setActiveMenu(prevIndex => prevIndex === index ? null : index);
 
         // Si le menu n'a pas de sous-menu, redirige vers la page
         if (!menu.subMenus) {
@@ -92,7 +34,7 @@ const SideNav = () => {
     };
 
     const contentSpace = useRef([]);
-    const [heights, setHeights] = useState(menus.map(() => '0px'));
+    const [heights, setHeights] = useState(menus && menus.map(() => '0px'));
 
     useEffect(() => {
         setHeights(heights =>
@@ -116,6 +58,7 @@ const SideNav = () => {
     }
 
     useEffect(() => {
+        // Ferme le menu si on clique en dehors
         document.addEventListener('click', (e) => {
             if (refSidebar.current && !refSidebar.current.contains(e.target)) {
                 refSidebar.current.classList.remove('active');
@@ -123,7 +66,8 @@ const SideNav = () => {
             }
         });
 
-        // Définir la hauteur de la barre latérale pour éviter le défilement
+        // Evite le défilement si l'écran est inférieur à 640px lors de d'un resize
+        // Ou si le menu est ouvert avec un écran inférieur à 640px
         const handleResize = () => {
             if ((window.innerWidth >= 640) || (window.innerWidth <= 640 && !refSidebar.current.classList.contains('active'))) {
                 document.body.style.overflow = 'auto';
@@ -142,27 +86,27 @@ const SideNav = () => {
         }
     }, []);
 
-    useEffect(() => {
-        // Définir la hauteur de la barre latérale pour éviter le défilement
-        const handleResize = () => {
-            if (window.innerWidth >= 640) {
-                document.body.style.overflow = 'auto';
-            } else {
-                document.body.style.overflow = 'hidden';
-            }
-        };
+    // useEffect(() => {
+    //     // Evite le défilement si l'écran est inférieur à 640px lors de d'un resize
+    //     const handleResize = () => {
+    //         if (window.innerWidth >= 640) {
+    //             document.body.style.overflow = 'auto';
+    //         } else {
+    //             document.body.style.overflow = 'hidden';
+    //         }
+    //     };
 
-        // Ajoutez le gestionnaire d'événement
-        window.addEventListener('resize', handleResize);
+    //     // Ajoutez le gestionnaire d'événement
+    //     window.addEventListener('resize', handleResize);
 
-        // Supprimez le gestionnaire d'événement lors du nettoyage
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
+    //     // Supprimez le gestionnaire d'événement lors du nettoyage
+    //     return () => {
+    //         window.removeEventListener('resize', handleResize);
+    //     };
+    // }, []);
 
     return (
-        <div ref={refSidebar} className="sidebar h-screen w-[400px] max-sm:w-screen fixed z-10 bg-gray-800 overflow-y-auto">
+        <div ref={refSidebar} className="sidebar h-screen w-[400px] max-sm:w-screen fixed z-10 overflow-y-auto">
             <Link href={"/"} className='flex justify-center text-white text-center font-bold py-6 text-2xl'>Initiation Next.JS</Link>
             <TbAlignJustified onClick={showSidebar} className='z-50 bg-white cursor-pointer text-black w-[35px] h-[35px] fixed top-[10px] left-[10px] hover:bg-slate-200 rounded' />
 
@@ -172,18 +116,18 @@ const SideNav = () => {
                     onClick={() => handleMenuClick(index, menu)}
                     className={`relative border-gray-300 flex flex-col justify-between items-center cursor-pointer border-t-2 ${index === menus.length - 1 ? 'border-b-2' : ""}`}
                 >
-                    <div className={`transition-all duration-500 hover:bg-zinc-900 w-full relative flex flex-row justify-between p-3 ${pathname === `/${menu.lesson}` ? 'bg-gray-900' : 'bg-gray-800'}`}>
+                    <div className={`transition-all duration-500 hover:bg-[rgb(30,0,80)] w-full relative flex flex-row justify-between p-3 ${pathname === `/${menu.lesson}` && 'bg-[rgb(30,0,35)]'}`}>
                         <span className="text-white text-lg w-full text-left">{menu.title}</span>
                         <span className='m-auto text-white'>
-                            {menu.subMenus && (<FaCaretRight className={`transition-all duration-250 ${activeMenu === index ? "rotate-90" : "rotate-0"}`} />)}
+                            {menu.subMenus && (<FaCaretRight className={`transition-all duration-300 ${activeMenu === index ? "rotate-90" : "rotate-0"}`} />)}
                         </span>
                     </div>
 
                     {menu.subMenus && (
                         <div ref={el => contentSpace.current[index] = el}
-                            style={{ maxHeight: `${heights[index]}` }} className="w-full transition-all duration-[500ms] overflow-hidden flex flex-col">
+                            style={{ maxHeight: `${heights[index]}` }} className="w-full transition-all duration-500 overflow-hidden flex flex-col">
                             {menu.subMenus.map((subMenu, i) => (
-                                <Link href={`/${menu.lesson}#${subMenu.lesson}`} key={i} onClick={(event) => event.stopPropagation()} className={`transition-all duration-300 hover:bg-zinc-800 p-3 text-sm w-full text-left border-gray-600 border-t ${index === menu.subMenus.length - 1 ? 'border-b' : ""}`}
+                                <Link href={`/${menu.lesson}#${subMenu.lesson}`} key={i} onClick={(event) => event.stopPropagation()} className={`transition-all duration-300 bg-[rgb(30,0,40)] hover:bg-[rgb(30,0,30)] p-3 text-sm w-full text-left border-gray-600 border-t ${index === menu.subMenus.length - 1 ? 'border-b' : ""}`}
                                 >{subMenu.title}</Link>
                             ))}
                         </div>

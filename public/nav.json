@@ -1,0 +1,168 @@
+[
+    {
+        "title": "Qu'est-ce que Next.js ?",
+        "lesson": 1
+    },
+    {
+        "title": "Pourquoi utiliser Next.js ?",
+        "lesson": 2
+    },
+    {
+        "title": "Installer et lancer un projet de Next.js",
+        "lesson": 3,
+        "subMenus": [
+            {
+                "title": "Installer Next.js (ne pas réaliser)",
+                "lesson": 1
+            },
+            {
+                "title": "Lancer un projet Next.js",
+                "lesson": 2
+            }
+        ]
+    },
+    {
+        "title": "Les extensions",
+        "lesson": 4,
+        "subMenus": [
+            {
+                "title": "JavaScript",
+                "lesson": 1
+            },
+            {
+                "title": "JSX",
+                "lesson": 2
+            },
+            {
+                "title": "La différence entre JS et JSX",
+                "lesson": 3
+            }
+        ]
+    },
+    {
+        "title": "Utiliser le JSX",
+        "lesson": 5,
+        "subMenus": [
+            {
+                "title": "Les différentes façon d'utiliser le JSX",
+                "lesson": 1
+            },
+            {
+                "title": "Opérateur ternaire en JSX",
+                "lesson": 2
+            }
+        ]
+    },
+    {
+        "title": "Les composants",
+        "lesson": 6,
+        "subMenus": [
+            {
+                "title": "Qu'est-ce qu'un composant",
+                "lesson": 1
+            },
+            {
+                "title": "Comment utiliser les composants",
+                "lesson": 2
+            }
+        ]
+    },
+    {
+        "title": "Créer une page / route",
+        "lesson": 7,
+        "subMenus": [
+            {
+                "title": "Créer une page statique",
+                "lesson": 1
+            },
+            {
+                "title": "Créer une page dynamique",
+                "lesson": 2
+            }
+        ]
+    },
+    {
+        "title": "Les server/client components",
+        "lesson": 8,
+        "subMenus": [
+            {
+                "title": "Server components",
+                "lesson": 1
+            },
+            {
+                "title": "Client components",
+                "lesson": 2
+            },
+            {
+                "title": "Résumé",
+                "lesson": 3
+            }
+        ]
+    },
+    {
+        "title": "Les gestionnaires d'événements",
+        "lesson": 9,
+        "subMenus": [
+            {
+                "title": "Qu'est-ce qu'un gestionnaire d'événement",
+                "lesson": 1
+            },
+            {
+                "title": "onClick",
+                "lesson": 2
+            },
+            {
+                "title": "onChange",
+                "lesson": 3
+            }
+        ]
+    },
+    {
+        "title": "Les hooks",
+        "lesson": 10,
+        "subMenus": [
+            {
+                "title": "Qu'est-ce qu'un hook",
+                "lesson": 1
+            },
+            {
+                "title": "useState",
+                "lesson": 2
+            },
+            {
+                "title": "useEffect",
+                "lesson": 3
+            },
+            {
+                "title": "useRef",
+                "lesson": 4
+            }
+        ]
+    },
+    {
+        "title": "Exercices",
+        "lesson": 11,
+        "subMenus": [
+            {
+                "title": "Exercice n°0",
+                "lesson": 0
+            },
+            {
+                "title": "Exercice n°1",
+                "lesson": 1
+            },
+            {
+                "title": "Exercice n°2",
+                "lesson": 2
+            },
+            {
+                "title": "Exercice n°3",
+                "lesson": 3
+            },
+            {
+                "title": "Exercice n°4",
+                "lesson": 4
+            }
+        ]
+    }
+]

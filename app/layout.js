@@ -1,5 +1,6 @@
 import "./globals.css";
 import Nav from "./components/Nav";
+import ButtonNextPrevious from "./components/ButtonNextPrevious";
 
 export const metadata = {
   title: "Create Next App",
@@ -15,9 +16,10 @@ export default function RootLayout({ children }) {
       </head>
       <body className="relative md:min-h-screen">
         <Nav />
-        <section className="z-0 sec mx-4 text-justify flex justify-center items-center flex-col">
+        <section className="z-0 mx-4 py-6 text-justify flex justify-center items-center flex-col">
           <div style={{ width: "min(90%, 750px)" }}>
             {children}
+            <ButtonNextPrevious />
           </div>
         </section>
       </body>

@@ -21,7 +21,7 @@ const Lesson = () => {
           Dans cet exemple, <mark>{"<h1>Hello World!</h1>"}</mark> est une expression JSX qui représente un élément HTML h1.
           <br /><br />
 
-          Vous pouvez insérer des expressions JavaScript dans votre JSX en les mettant entre accolades {"{ }"}. Par exemple :
+          Vous pouvez insérer des expressions JavaScript dans votre JSX, en les mettant entre accolades <mark>{"{ }"}</mark>.
         </p>
         <FormatToCode language="jsx">
           {`export default function Page() {
@@ -44,14 +44,14 @@ const Lesson = () => {
   return (
     <>
       <h1>Bonjour et bienvenue!</h1>
-      <h2>Prénom, {name}</h2>
-      <h2>Nom de famille, {lastName}</h2>
+      <h2>Prénom : {name}</h2>
+      <h2>Nom de famille : {lastName}</h2>
     </>
   );
 }`}
         </FormatToCode>
         <p>
-          Noter que dans cet exemple, nous avons utilisé <mark>{"<>"}</mark> pour englober les éléments. C'est une syntaxe raccourcie pour éviter d'avoir à créer un élément parent. Vous pouvez également utiliser <mark>{"<div>"}</mark> ou tout autre élément HTML. <u>En effet, il est obligatoire d'avoir un seul élément parent dans le JSX.</u>
+          Dans du code JSX, <u>il est obligatoire d'avoir un seul élément parent</u>, qui, dans cette exemple, est représenté par <mark>{"<> </>"}</mark>. Noter que nous avons utilisé <mark>{"<> </>"}</mark> pour englober les éléments, c'est une syntaxe raccourcie pour éviter d'avoir à créer un élément parent dans le HTML. Vous pouvez également utiliser <mark>{"<div>"}</mark> ou tout autre élément HTML à la place. Ce qui signifie, qu'à partir du code ci-dessus, que dans le code HTML, il n'y aura que la balise <mark>{"<h1>"}</mark> et les deux balises <mark>{"<h2>"}</mark> et non pas un élément <mark>{"<div>"}</mark> qui englobe les trois balises.
         </p>
       </div>
 
@@ -66,6 +66,7 @@ const Lesson = () => {
           {`export default function Page() {
   const lastName = 'EncoreMoi';
   let message = "Vous n'existez pas!";
+
   return (
     <>
       <h1>Bonjour et bienvenue!</h1>
@@ -84,10 +85,10 @@ const Lesson = () => {
         </FormatToCode>
 
         <p>
-          Dans cet exemple, l'expression JSX affiche le nom de famille si la constante <mark>lastName</mark> est définie ou si <mark>lastName</mark> est égale  à <mark>"EncoreMoi"</mark>, sinon elle affiche le contenu du <mark>else</mark>. Remarquer que nous avons utilisé <mark>{"{ }"}</mark> pour englober notre condition. Cela permet de spécifier que nous voulons utiliser du JavaScript. De plus, dans le <mark>else</mark> nous avons utilisé <mark>{"( )"}</mark> pour englober les éléments à afficher car il y en a plusieurs et utilisé <mark>{"{ }"}</mark> pour insérer notre variable <mark>JS</mark>. <u>L'élement parent est également obligatoire si vous utilisez plusieurs balises.</u>
+          Dans cet exemple, l'expression JSX affiche le nom de famille si la constante <mark>lastName</mark> est définie ou si <mark>lastName</mark> est égale  à <mark>"EncoreMoi"</mark>, sinon elle affiche le contenu situé dans le <mark>else</mark>. Remarquer que nous avons utilisé <mark>{"{ }"}</mark> pour englober notre condition. Cela permet de spécifier que nous voulons utiliser du <mark>JavaScript</mark>. De plus, dans le <mark>else</mark> nous avons utilisé <mark>{"( )"}</mark> pour englober tous les éléments à afficher à cause du principe de l'élément parent. Dans le <mark>else</mark>, il y a également <mark>{"{ }"}</mark> pour insérer notre variable <mark>JavaScript</mark>.
           <br /><br />
 
-          Dans exemple suivant, l'expression JSX affiche le nom de famille si la constante <mark>lastName</mark> est définie, dans las, dans le cas contraire elle ne fera rien d'autre. Cela fonctionne si <mark>lastName</mark> est une chaîne de caractères non vide, un nombre différent de 0, un objet, etc.
+          Dans exemple suivant, l'expression JSX affiche le nom de famille si la constante <mark>lastName</mark> est définie, dans le cas contraire elle ne fera rien d'autre. Cela fonctionne si <mark>lastName</mark> est une chaîne de caractères non vide, un nombre différent de 0, un objet, etc.
 
         </p>
 
@@ -106,48 +107,6 @@ const Lesson = () => {
 }`}
         </FormatToCode>
       </div>
-
-      <div>
-        <h2>Exercice</h2>
-        <p>
-          L'objectif est d'afficher <mark>un article</mark> dans une balise <mark>{"<h2>"}</mark> avec comme texte <mark>"Panier : {'<'}nom de l'article{'>'}"</mark> si la variable <mark>article</mark> est <mark>définie/non null</mark>, sinon afficher <mark>"Le panier est vide"</mark>. Ensuite, afficher un <mark>{"<span>"}</mark> avec le texte <mark>"Le produit a été fabriqué en France"</mark> si la variable <mark>fabrication</mark> est égale à <mark>"France"</mark>.
-          <br /><br />
-          A partir du fichier Exo1.jsx recréer ce code écrit en JavaScript en JSX :
-        </p>
-      </div>
-
-      <FormatToCode language="jsx">
-        {`let article = 'Table';
-let fabrication = 'France';
-const h2 = document.createElement('h2');
-const span = document.createElement('span');
-
-if (article) {
-  h2.innerText = 'Panier : ' + article;
-} else {
-  h2.innerText = 'Le panier est vide';
-}
-if (fabrication == "France") {
-  span.innerText = 'Le produit a été fabriqué en France';
-}`}
-      </FormatToCode>
-
-      <Solution>
-        <FormatToCode language="jsx">
-          {`export default function Exo1() {
-  let article = 'Table';
-  let fabrication = 'France';
-
-  return (
-    <>
-      <h1>Mon panier</h1>
-      {article ? (<h2>Panier : {article}</h2>) : <h2>Le panier est vide</h2>}
-      {fabrication == "France" && <span>Le produit a été fabriqué en France</span>}
-    </>
-  );
-}`}
-        </FormatToCode>
-      </Solution>
     </div>
   );
 }
