@@ -106,7 +106,7 @@ const SideNav = () => {
     // }, []);
 
     return (
-        <div ref={refSidebar} className="sidebar h-screen w-[400px] max-sm:w-screen fixed z-10 overflow-y-auto">
+        <div ref={refSidebar} className="sidebar h-screen w-[400px] max-sm:w-screen fixed z-10 overflow-auto border-r-2 border-white">
             <Link href={"/"} className='flex justify-center text-white text-center font-bold py-6 text-2xl'>Initiation Next.JS</Link>
             <TbAlignJustified onClick={showSidebar} className='z-50 bg-white cursor-pointer text-black w-[35px] h-[35px] fixed top-[10px] left-[10px] hover:bg-slate-200 rounded' />
 

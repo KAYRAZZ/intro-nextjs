@@ -60,9 +60,9 @@ if (fabrication == "France") {
 
       <div id="2">
         <h2>Projet : Création d'un site</h2>
+        <h3>Test</h3>
         <p>
-          Vous allez créer 3 pages. Deux pages en statique, une pour <mark>accueil</mark> et une autre pour <mark>à propos</mark>. Puis en dynamique une page <mark>article</mark>
-          <br />
+          Vous allez créer 3 pages distincts. Deux pages en statique, dont une pour <mark>accueil</mark> et une autre pour <mark>à propos</mark>. Puis une page en dynamique nommée <mark>article</mark>.
         </p>
       </div>
     </div>

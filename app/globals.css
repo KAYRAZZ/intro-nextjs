@@ -135,6 +135,10 @@ mark::before {
     border: 2px solid var(--secondary);
 }
 
+mark.cursor-copy::before {
+    border: 2px solid rgb(209, 0, 0);
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
