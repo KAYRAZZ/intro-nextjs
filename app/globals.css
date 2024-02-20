@@ -136,7 +136,7 @@ mark::before {
 }
 
 mark.cursor-copy::before {
-    border: 2px solid rgb(209, 0, 0);
+    border: 2px solid rgb(255, 140, 0);
 }
 
 mark.cursor-copy:active::before {

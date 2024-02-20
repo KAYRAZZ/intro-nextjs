@@ -64,13 +64,6 @@ const Lesson = () => {
                     Dans le fichier <mark>page.js</mark>, vous pouvez accéder aux paramètres dynamiques avec <mark>params</mark> qui est un objet. Par exemple, si vous accédez à <mark>/posts/a</mark>, <mark>params</mark> sera <mark>{'{ post: "a" }'}</mark>. Vous pouvez ensuite utiliser cette valeur pour récupérer et afficher du contenu spécifique à cette page, par exemple en effectuant une requête à une base de données.
                 </p>
             </div>
-
-            <div>
-                <h2>Exercice : Création d'un projet</h2>
-                <p>
-                    Vous allez créer 3 pages. En statique : <mark>accueil</mark> et <mark>à propos</mark> puis en dynamique une page <mark>article</mark>.
-                </p>
-            </div>
         </div >
     );
 }

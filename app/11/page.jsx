@@ -57,12 +57,10 @@ if (fabrication == "France") {
         </FormatToCode>
       </Solution>
 
-
       <div id="2">
         <h2>Projet : Création d'un site</h2>
-        <h3>Test</h3>
         <p>
-          Vous allez créer 3 pages distincts. Deux pages en statique, dont une pour <mark>accueil</mark> et une autre pour <mark>à propos</mark>. Puis une page en dynamique nommée <mark>article</mark>.
+          Vous allez créer/contruire 3 pages distinctes. Deux pages en statique, dont une pour <mark>accueil</mark> et une autre pour <mark>à propos</mark>. Puis une page dynamique nommée <mark>article</mark>. Tout cela dans le dossier <mark>app</mark>. La page d'accueil étant la page par défaut <mark>page.js</mark>, il n'y a pas besoin de la créer.
         </p>
       </div>
     </div>

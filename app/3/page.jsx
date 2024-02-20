@@ -39,9 +39,37 @@ const Lesson = () => {
                     <br /><br />
                     Par défaut, c’est le <mark>port 3000</mark> qui est utilisé. Cependant, si ce port est déjà utilisé par une autre application sur votre machine, il faudra lancer une autre commande <mark className='cursor-copy' onClick={handleClick}>npx next dev -p {'<port>'}</mark>.
                     Pendant que le serveur de développement est en cours d'exécution, toute modification que vous apportez à votre code sera automatiquement détectée et votre application sera rechargée automatiquement dans le navigateur, vous permettant de voir les modifications en direct.
-                    Pour arrêter le serveur de développement, revenez dans votre terminal et utilisez la combinaison de touches <mark className='cursor-copy' onClick={handleClick}>Ctrl + C</mark>.
+                    Pour arrêter le serveur de développement, revenez dans votre terminal et utilisez la combinaison de touches <mark>Ctrl + C</mark>.
 
                 </p>
+            </div>
+
+            <div>
+                <h2>Arborescence</h2>
+                <p>
+                    L'arborescence d'un projet <mark>Next.js</mark> est composée de plusieurs dossiers et fichiers.
+                    <br /><br />
+                </p>
+                <ul className='space-y-2'>
+                    <li>
+                        <mark>/app</mark> : C'est dans ce dossier où vous aller principalement travailler
+                    </li>
+                    <li>
+                        <mark>/app/page.js</mark> : C'est le fichier par défaut qui sera affiché à la racine de votre site
+                    </li>
+                    <li>
+                        <mark>/app/layout.js</mark> : C'est le fichier qui contiendra la structure de votre site
+                    </li>
+                    <li>
+                        <mark>/app/components</mark> : Contient tous les composants réutilisables
+                    </li>
+                    <li>
+                        <mark>/public</mark> : Ce répertoire est utilisé pour servir des fichiers statiques. Tel que les images et les feuilles de style
+                    </li>
+                    <li>
+                        <mark>package.json</mark> : C'est le fichier de configuration de votre projet. Il contient des informations sur votre projet, telles que les dépendances, les scripts, etc.
+                    </li>
+                </ul>
             </div>
         </div>
     );

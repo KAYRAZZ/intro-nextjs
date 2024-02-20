@@ -88,7 +88,7 @@ const Lesson = () => {
           Dans cet exemple, l'expression JSX affiche le nom de famille si la constante <mark>lastName</mark> est définie ou si <mark>lastName</mark> est égale  à <mark>"EncoreMoi"</mark>, sinon elle affiche le contenu situé dans le <mark>else</mark>. Remarquer que nous avons utilisé <mark>{"{ }"}</mark> pour englober notre condition. Cela permet de spécifier que nous voulons utiliser du <mark>JavaScript</mark>. De plus, dans le <mark>else</mark> nous avons utilisé <mark>{"( )"}</mark> pour englober tous les éléments à afficher à cause du principe de l'élément parent. Dans le <mark>else</mark>, il y a également <mark>{"{ }"}</mark> pour insérer notre variable <mark>JavaScript</mark>.
           <br /><br />
 
-          Dans exemple suivant, l'expression JSX affiche le nom de famille si la constante <mark>lastName</mark> est définie, dans le cas contraire elle ne fera rien d'autre. Cela fonctionne si <mark>lastName</mark> est une chaîne de caractères non vide, un nombre différent de 0, un objet, etc.
+          Dans exemple suivant, l'expression JSX affiche le nom de famille si la constante <mark>lastName</mark> est définie, dans le cas contraire elle ne fera rien d'autre. Cela fonctionne si <mark>lastName</mark> est une chaîne de caractères non vide, un nombre différent de 0, un objet, etc. L'opérateur <mark className="font-sans">&&</mark> est utilisé pour afficher un élément si une condition est vraie, il n'y a pas de <mark>else</mark>.
 
         </p>
 
