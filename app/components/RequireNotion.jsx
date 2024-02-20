@@ -8,7 +8,7 @@ const RequireNotion = ({ notion }) => {
     const [menus, setMenus] = useState([]);
     useEffect(() => {
         const fetchMenus = async () => {
-            const response = await fetch('http://localhost:3000/nav.json');
+            const response = await fetch('/nav.json');
             const data = await response.json();
             setMenus(data);
         }
