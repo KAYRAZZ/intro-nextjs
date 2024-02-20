@@ -139,6 +139,10 @@ mark.cursor-copy::before {
     border: 2px solid rgb(209, 0, 0);
 }
 
+mark.cursor-copy:active::before {
+    border: 2px solid rgb(0, 48, 144);
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
