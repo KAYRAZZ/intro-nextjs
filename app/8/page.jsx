@@ -1,129 +1,39 @@
 import FormatToCode from "../components/FormatToCode";
-import { GrStatusGood } from "react-icons/gr";
-import { RxCrossCircled } from "react-icons/rx";
 
 const Lesson = () => {
 
-    return (
-        <div id="1" className="py-5">
-            <h1>Les server/client components</h1>
-            <div>
-                <h2>Server components</h2>
-                <p>
-                    Les Server Components sont des éléments d'interface utilisateur {"(UI)"} qui sont rendus côté serveur et envoyés au client sous forme de HTML. Les Server Components sont exécutés sur le serveur et peuvent interagir avec des ressources telles que des bases de données, des API externes, ou d'autres services back-end. <u>Par défault, les composants sont rendus côté serveur.</u>
-                    <br /><br />
-                    <span className="font-semibold">Le rendu côté serveur offre plusieurs avantages :</span>
-                </p>
-
-                <ol className="list-[circle] space-y-2 pt-2">
-                    <li>Amélioration des performances en rapprochant la récupération des données du serveur.
-                    </li>
-                    <li>Sécurisation des données sensibles en les gardant du côté serveur.
-                    </li>
-                    <li>Mise en cache des résultats pour des performances améliorées et des coûts réduits.
-                    </li>
-                    <li>Réduction de la taille des bundles JavaScript côté client.
-                    </li>
-                    <li>Affichage immédiat de la page et du contenu significatif sans attendre le JavaScript.
-                    </li>
-                </ol>
-
-            </div>
-
-            <div id="2">
-                <h2>Client components</h2>
-                <p>
-                    Les Client Componants sont des composants qui sont rendus côté client. Ils sont utilisés pour les pages qui changent souvent. Les Client Componants vous permettent de faire des interfaces utilisateur interactive.
-                </p>
-                <FormatToCode language="jsx">
-                    {`"use client"
-
-export default function Page() {
-  return <div onClick={alert("Je clique")}>Ma page</div>
-};`}
-                </FormatToCode>
-                <p>
-                    Dans cet exemple, le composant <mark>Page</mark> est rendu côté client. Lorsque l'utilisateur clique sur la page, une alerte s'affiche. Pour cela, il faut ajouter <mark>"use client"</mark> <u>absolument tout en haut de la page</u> pour indiquer que ce composant doit être rendu côté client afin de pouvoir utiliser l'écouteur d'événement <mark>onClick</mark>.
-                    <br /><br />
-
-                    Maintenant, tous les composants qui sont rendus par ce composant, vont être des clients components. Autrement dit, si vous avez un composant qui est rendu côté client, tous les composants enfants de ce composant seront également rendus côté client.
-                    <br /><br />
-
-                    <span className="font-semibold">Il y a plusieurs avantages à effectuer le rendu côté client, notamment :
-                    </span>
-                </p>
-                <ol className="list-[circle] space-y-2 pt-2">
-                    <li>Permet d'utiliser useState, useEffect et les écouteurs d'événements, ce qui leur permet de fournir un retour immédiat à l'utilisateur et de mettre à jour l'interface utilisateur.
-                    </li>
-                    <li>Accès aux APIs du navigateur, comme la géolocalisation ou localStorage, ce qui vous permet de construire des interfaces utilisateur pour des cas d'utilisation spécifiques.
-                    </li>
-                </ol>
-            </div>
-
-            <div id="3">
-                <h2>Résumé</h2>
-                <p>
-                    Voici un tableau qui résume les différences entre les deux types de composants.
-                </p>
-                <table className="tab">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Server Component</th>
-                            <th>Client Component</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Récupérer des données serveur</td>
-                            <td><GrStatusGood className="good" /></td>
-                            <td><RxCrossCircled className="bad" /></td>
-                        </tr>
-                        <tr>
-                            <td>Accéder aux ressources du backend {"(directement)"}</td>
-                            <td><GrStatusGood className="good" /></td>
-                            <td><RxCrossCircled className="bad" /></td>
-                        </tr>
-                        <tr>
-                            <td>Conserver les informations sensibles sur le serveur {"(jetons d'accès, clés API, etc.)"}</td>
-                            <td><GrStatusGood className="good" /></td>
-                            <td><RxCrossCircled className="bad" /></td>
-                        </tr>
-                        <tr>
-                            <td>Conserver les dépendances volumineuses sur le serveur / Réduire le JavaScript côté client</td>
-                            <td><GrStatusGood className="good" /></td>
-                            <td><RxCrossCircled className="bad" /></td>
-                        </tr>
-                        <tr>
-                            <td>Ajouter de l'interactivité et des écouteurs d'événements {"(onClick(), onChange(), etc.)"}</td>
-                            <td><RxCrossCircled className="bad" /></td>
-                            <td><GrStatusGood className="good" /></td>
-                        </tr>
-                        <tr>
-                            <td>Utiliser State et Lifecycle Effects {"(useState(), useReducer(), useEffect(), etc.)"}</td>
-                            <td><RxCrossCircled className="bad" /></td>
-                            <td><GrStatusGood className="good" /></td>
-                        </tr>
-                        <tr>
-                            <td>Utiliser les API du navigateur uniquement</td>
-                            <td><RxCrossCircled className="bad" /></td>
-                            <td><GrStatusGood className="good" /></td>
-                        </tr>
-                        <tr>
-                            <td>Utiliser des hooks personnalisés qui dépendent de l'état, des effets ou des API du navigateur uniquement</td>
-                            <td><RxCrossCircled className="bad" /></td>
-                            <td><GrStatusGood className="good" /></td>
-                        </tr>
-                        <tr>
-                            <td>Utiliser les composants React Class</td>
-                            <td><RxCrossCircled className="bad" /></td>
-                            <td><GrStatusGood className="good" /></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div >
-    );
+  return (
+    <div id="1" className="py-5">
+      <h1>Les liens</h1>
+      <div>
+        <h2>La balise {`<a>`}</h2>
+        <p>
+          La balise <mark>{`<a>`}</mark> est une balise HTML standard pour créer des liens. Dans une application Next.js, vous l'utiliseriez pour les liens externes, c'est-à-dire les liens qui pointent vers un autre domaine. Pour ces liens, vous n'avez pas besoin des fonctionnalités de Link, donc une balise <mark>{`<a>`}</mark> standard suffit.
+        </p>
+      </div>
+      <div id="2">
+        <h2>La balise {`<Link>`}</h2>
+        <p>
+          Le composant <mark>{`<Link>`}</mark> est spécifique à Next.js. Il permet une navigation entre les pages de votre application Next.js sans recharger la page. Cela donne une expérience utilisateur très fluide et rapide, car <u>seule la partie de la page qui change est mise à jour</u>. De plus, Link prend en charge la précharge automatique, ce qui signifie que Next.js chargera le code de la page en arrière-plan avant que l'utilisateur ne clique sur le lien, rendant la navigation encore plus rapide. Le chemin de la page est spécifié dans l'attribut <mark>href</mark> de la balise <mark>Link</mark>.
+        </p>
+      </div>
+      <FormatToCode language="jsx">
+        {`import Link from 'next/link';
+export default function Home() {
+  return (
+    <nav>
+      <Link href="/">Accueil</Link>
+      <Link href="/about">À propos</Link>
+    </nav>
+  );
+}`}
+      </FormatToCode>
+      <p>
+        N'oubliez pas d'import cette fonctionnalité.
+        En résumé, dans une application Next.js, utilisez le composant Link pour la navigation interne entre vos pages, et utilisez la balise <mark>{`<a>`}</mark> pour les liens externes.
+      </p>
+    </div>
+  );
 }
 
 export default Lesson;

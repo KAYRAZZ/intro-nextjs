@@ -8,9 +8,9 @@ const Lesson = () => {
             <div>
                 <h2>Créer une page statique</h2>
                 <p>
-                    Dans Next.js, la création de pages suit une approche particulière. Les pages sont créées dans le répertoire <mark>app</mark>. Pour ce faire, il faut créer un dossier qui portera le nom de la route dans l'URL, et à l'intérieur de ce dossier, créer un fichier nommé <mark>page.jsx</mark> ou <mark>page.js</mark>, c'est ce fichier qui rendrera le contenu de la page. Nommer ce fichier différemment, fera que cette page sera inatteignable.
+                    Dans Next.js, la création de pages suit une approche particulière. Les pages sont créées dans le répertoire <mark>app</mark>. Pour ce faire, il faut créer un dossier qui <u>portera le nom de la route dans l'URL</u>, et à l'intérieur de ce dossier, créer un fichier nommé <mark>page.jsx</mark> ou <mark>page.js</mark>, c'est ce fichier qui rendrera le contenu de la page. Nommer ce fichier différemment, fera que cette page sera inatteignable.
                     <br /><br />
-                    Noter que les fichiers <mark>page.jsx</mark> ou <mark>page.js</mark> doivent être exportés par défaut. Voici un exemple de fichier <mark>page.jsx</mark> :
+                    Noter que les fichiers <mark>page.jsx</mark> ou <mark>page.js</mark> doivent être exportés par défaut.
                 </p>
                 <FormatToCode language="jsx">
                     {`export default function Page() {
@@ -61,7 +61,7 @@ const Lesson = () => {
                 </FormatToCode>
 
                 <p className="py-6">
-                    Dans le fichier <mark>page.js</mark>, vous pouvez accéder aux paramètres dynamiques avec <mark>params</mark> qui est un objet. Par exemple, si vous accédez à <mark>/posts/a</mark>, <mark>params</mark> sera <mark>{'{ post: "a" }'}</mark>. Vous pouvez ensuite utiliser cette valeur pour récupérer et afficher du contenu spécifique à cette page, par exemple en effectuant une requête à une base de données.
+                    Dans la page, vous pouvez accéder aux paramètres dynamiques avec <mark>params</mark> qui est un objet. Par exemple, si vous accédez à <mark>/posts/a</mark>, <mark>params</mark> sera <mark>{'{ post: "a" }'}</mark>. Vous pouvez ensuite utiliser cette valeur pour récupérer et afficher du contenu spécifique à cette page, par exemple en effectuant une requête à une base de données.
                 </p>
             </div>
         </div >

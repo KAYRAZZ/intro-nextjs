@@ -18,6 +18,10 @@
             {
                 "title": "Lancer un projet Next.js",
                 "lesson": 2
+            },
+            {
+                "title": "Arborescence",
+                "lesson": 3
             }
         ]
     },
@@ -82,8 +86,22 @@
         ]
     },
     {
-        "title": "Les server/client components",
+        "title": "Les liens",
         "lesson": 8,
+        "subMenus": [
+            {
+                "title": "La balise <a>",
+                "lesson": 1
+            },
+            {
+                "title": "La balise <Link>",
+                "lesson": 2
+            }
+        ]
+    },
+    {
+        "title": "Les server/client components",
+        "lesson": 9,
         "subMenus": [
             {
                 "title": "Server components",
@@ -101,7 +119,7 @@
     },
     {
         "title": "Les gestionnaires d'événements",
-        "lesson": 9,
+        "lesson": 10,
         "subMenus": [
             {
                 "title": "Qu'est-ce qu'un gestionnaire d'événement",
@@ -118,8 +136,12 @@
         ]
     },
     {
+        "title": "Fonction map()",
+        "lesson": 11
+    },
+    {
         "title": "Les hooks",
-        "lesson": 10,
+        "lesson": 12,
         "subMenus": [
             {
                 "title": "Qu'est-ce qu'un hook",
@@ -132,16 +154,12 @@
             {
                 "title": "useEffect",
                 "lesson": 3
-            },
-            {
-                "title": "useRef",
-                "lesson": 4
             }
         ]
     },
     {
         "title": "Exercices",
-        "lesson": 11,
+        "lesson": 13,
         "subMenus": [
             {
                 "title": "Exercice n°0",
@@ -152,16 +170,8 @@
                 "lesson": 1
             },
             {
-                "title": "Exercice n°2",
+                "title": "Projet : Création d'un site",
                 "lesson": 2
-            },
-            {
-                "title": "Exercice n°3",
-                "lesson": 3
-            },
-            {
-                "title": "Exercice n°4",
-                "lesson": 4
             }
         ]
     }

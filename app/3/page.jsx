@@ -55,13 +55,10 @@ const Lesson = () => {
                         <mark>/app</mark> : C'est dans ce dossier où vous aller principalement travailler
                     </li>
                     <li>
-                        <mark>/app/page.js</mark> : C'est le fichier par défaut qui sera affiché à la racine de votre site
+                        <mark>/app/page.js</mark> : C'est le fichier qui contiendra le contenu de votre page web situé à la racine de votre site
                     </li>
                     <li>
                         <mark>/app/layout.js</mark> : C'est le fichier qui contiendra la structure de votre site
-                    </li>
-                    <li>
-                        <mark>/app/components</mark> : Contient tous les composants réutilisables
                     </li>
                     <li>
                         <mark>/public</mark> : Ce répertoire est utilisé pour servir des fichiers statiques. Tel que les images et les feuilles de style

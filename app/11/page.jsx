@@ -1,69 +1,35 @@
 import FormatToCode from "../components/FormatToCode";
-import RequireNotion from "../components/RequireNotion";
-import Solution from "../components/Solution";
 
-const Exercice = () => {
+const Lesson = () => {
+
   return (
-    <div id="0" className="py-5">
-      <h1>Exercices</h1>
-      <div>
-        <h2>Exercice N°0</h2>
-        <RequireNotion notion={[1, 2, 3]} />
-        Le principe est simple, il faut se renseigner sur les notions requises avant de réaliser l'exercice.
-        <p>
-        </p>
-      </div>
-
-      <div id="1">
-        <h2>Exercice n°1</h2>
-        <RequireNotion notion={[4, 5]} />
-        <p>
-          L'objectif est d'afficher <mark>un article</mark> dans une balise <mark>{"<h2>"}</mark> avec comme texte <mark>"Panier : {'<nom de l\'article>'}"</mark> si la variable <mark>article</mark> est <mark>définie/non null</mark>, sinon afficher <mark>"Le panier est vide"</mark>. Ensuite, afficher un <mark>{"<span>"}</mark> avec le texte <mark>"Le produit a été fabriqué en France"</mark> si la variable <mark>fabrication</mark> est égale à <mark>"France"</mark>.
-          <br /><br />
-          A partir du fichier Exo1.jsx recréer ce code écrit en JavaScript en JSX :
-        </p>
-      </div>
+    <div id="1" className="py-5">
+      <h1>Fonction {'map()'}</h1>
+      <h2></h2>
+      <p>
+        La méthode <mark>{'map()'}</mark> en JavaScript est souvent utilisée dans les applications Next.js pour afficher des listes d'éléments. Elle est particulièrement utile lorsque vous travaillez avec des données dynamiques, par exemple des données provenant d'une API.
+      </p>
 
       <FormatToCode language="jsx">
-        {`let article = 'Table';
-let fabrication = 'France';
-const h2 = document.querySelector('h2');
-const span = document.querySelector('span');
-
-if (article) {
-  h2.innerText = 'Panier : ' + article;
-} else {
-  h2.innerText = 'Le panier est vide';
-}
-if (fabrication == "France") {
-  span.innerText = 'Le produit a été fabriqué en France';
-}`}
-      </FormatToCode>
-
-      <Solution>
-        <FormatToCode language="jsx">
-          {`export default function Exo1() {
-  let article = 'Table';
-  let fabrication = 'France';
-
+        {`export default function Home() {
+  let posts = [ 'post1', 'post2', 'post3' ];
   return (
-    <>
-      <h1>Mon panier</h1>
-      {article ? (<h2>Panier : {article}</h2>) : <h2>Le panier est vide</h2>}
-      {fabrication == "France" && <span>Le produit a été fabriqué en France</span>}
-    </>
+    <div>
+      {posts.map((post, index) => (
+        <div key={index}>
+          <span>{post}</span>
+        </div>
+      ))}
+    </div>
   );
 }`}
-        </FormatToCode>
-      </Solution>
+      </FormatToCode>
+      <p>
+        Dans cet exemple, nous avons une liste de posts. Nous utilisons la méthode <mark>{'map()'}</mark> pour parcourir chaque élément de la liste et afficher un élément {'<div>'} pour chaque post. Nous utilisons également la propriété <mark>key</mark> pour chaque élément {'<div>'}. La propriété {'key'} est utilisée par React pour identifier chaque élément de la liste. <u>Elle doit être unique pour chaque élément de la liste, elle est obligatoire et doit être placer dans l'élément parent.</u>
+      </p>
 
-      <div id="2">
-        <h2>Projet : Création d'un site</h2>
-        <p>
-          Vous allez créer/contruire 3 pages distinctes. Deux pages en statique, dont une pour <mark>accueil</mark> et une autre pour <mark>à propos</mark>. Puis une page dynamique nommée <mark>article</mark>. Tout cela dans le dossier <mark>app</mark>. La page d'accueil étant la page par défaut <mark>page.js</mark>, il n'y a pas besoin de la créer.
-        </p>
-      </div>
     </div>
   );
 }
-export default Exercice;
+
+export default Lesson;

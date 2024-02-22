@@ -8,7 +8,7 @@ const Lesson = () => {
       <div>
         <h2>Qu'est-ce qu'un composant</h2>
         <p>
-          Les composants vous permettent de découper l’interface utilisateur en éléments indépendants et réutilisables, vous permettant ainsi de considérer chaque élément de manière isolée. Il possède sa propre logique et sa propre apparence. Un composant peut être aussi petit qu'une balise bouton ou aussi grand qu'une page entière. Par convention, ils sont placés dans le dossier <mark>components</mark> à l'intérieur du dossier <mark>app</mark>.
+          Les composants vous permettent de découper l’interface utilisateur en éléments indépendants et réutilisables, vous permettant ainsi de considérer chaque élément de manière isolée. Il possède sa propre logique et sa propre apparence. Un composant peut être aussi petit qu'une balise bouton ou aussi grand qu'une page entière. Par convention, ils sont placés dans le dossier <mark>components</mark> à l'intérieur du dossier <mark>app</mark>. <u>Ils doivent obligatoirement porter une majuscule.</u>
           <br /><br />
           Voici un exemple :
         </p>
@@ -37,7 +37,7 @@ const Lesson = () => {
         </FormatToCode>
 
         <p>
-          Remarquez que <mark>{'<MonBouton />'}</mark> commence par une majuscule. C'est ainsi que vous savez qu'il s'agit d'un composant. <u>Les noms des composants doivent toujours commencer par une majuscule</u>, tandis que les balises HTML doivent être en minuscules. Noter également que <mark>{'<MonBouton />'}</mark> est auto-fermante, c'est-à-dire qu'il n'a pas de balise de fermeture.
+          Remarquez que <mark>{'<MonBouton />'}</mark> commence par une majuscule. C'est ainsi que vous savez qu'il s'agit d'un composant. Noter également que <mark>{'<MonBouton />'}</mark> est <u>auto-fermante</u>, c'est-à-dire qu'il n'a pas de balise de fermeture.
           <br /><br />
           Il faut également exporter le composant pour pouvoir l'utiliser. Pour ce faire, il faut ajouter la ligne suivante à la fin du fichier : <mark>export default MonBouton</mark>. Il est également possible de l'écrire directement devant la fonction.
         </p>
@@ -55,7 +55,7 @@ export default function MonBouton() ...`}
         </FormatToCode>
 
         <p>
-          Mais pour utiliser le composant <mark>MonBouton</mark> dans un autre fichier, vous devez l'importer. Pour ce faire, la ligne de l'importation doit être en haut du fichier où <mark>MonBoutonComponent</mark> est le nom du fichier qui contient le composant et <mark>MonBouton</mark> qui est le nom de la fonction. <u>Attention à ne pas placer l'extension du fichier dans l'import.</u>
+          Mais pour utiliser le composant <mark>MonBouton</mark> dans un autre fichier, vous devez l'importer. Pour ce faire, la ligne de l'importation doit être en haut du fichier où <mark>MonBoutonComponent</mark> est le nom du fichier qui contient le composant et <mark>MonBouton</mark> qui est le nom de la fonction. <u>Attention à ne pas écrire l'extension du fichier dans l'import.</u>
         </p>
 
         <FormatToCode language="jsx">
@@ -69,8 +69,14 @@ export default function Page() {
   );
 }`}
         </FormatToCode>
-      </div >
-    </div >
+      </div>
+      <p>
+        Par contre, si votre composant/fonction n'est pas exporté par défaut, <u>vous devez l'importer avec des accolades</u>.
+      </p>
+      <FormatToCode language="jsx">
+        {`import { MonBouton } from './components/MonBoutonComponent'`}
+      </FormatToCode>
+    </div>
   );
 }
 

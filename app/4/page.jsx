@@ -36,9 +36,9 @@ document.body.appendChild(h1);`}
                     <br /><br />
                     En général, les fichiers avec l'extension <mark>.jsx</mark> sont utilisés lorsque vous écrivez du code qui utilise la syntaxe JSX. Cependant, avec des outils modernes de développement JavaScript comme Babel et Webpack, vous pouvez également utiliser la syntaxe JSX dans des fichiers avec l'extension <mark>.js</mark>. Ces outils transpileront alors le code en JavaScript ordinaire que le navigateur peut comprendre.
                     <br /><br />
-                    L'utilisation de l'extension <mark>.jsx</mark> peut aider à indiquer clairement que le fichier contient du JSX, ce qui peut rendre votre code plus facile à comprendre pour d'autres développeurs. De plus, certains éditeurs de code et outils peuvent fournir une meilleure assistance pour le JSX si le fichier a une extension <mark>.jsx</mark>.
+                    L'utilisation de l'extension <mark>.jsx</mark> peut aider à indiquer clairement que le fichier contient du JSX, ce qui peut rendre votre code plus facile à comprendre pour d'autres développeurs.
                     <br /><br />
-                    Bien qu'il soit préférable de nommer vos fichiers contenant du JSX avec l'extension <mark>.jsx</mark> pour éviter les erreurs potentielles, il est important de noter que du point de vue fonctionnel, il n'y a pas de différence significative entre l'utilisation des extensions <mark>.js</mark> ou <mark>.jsx</mark>. Cette distinction devient surtout pertinente si vous configurez votre environnement de développement pour traiter le JSX dans les fichiers <mark>.js</mark>. Dans ce cas, le choix entre les deux extensions devient une question de préférence personnelle et des conventions de votre équipe de développement.
+                    Bien qu'il soit préférable de nommer vos fichiers contenant du JSX avec l'extension <mark>.jsx</mark> pour éviter les erreurs potentielles, le choix entre les deux extensions devient une question de préférence personnelle et des conventions de votre équipe de développement.
                 </p>
             </div>
         </div>
