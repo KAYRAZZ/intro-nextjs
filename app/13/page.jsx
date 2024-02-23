@@ -71,13 +71,15 @@ if (fabrication == "France") {
       <div id="2">
         <h2>Projet : Création d'un site</h2>
         <p>
-          Le but est de créer un site d'affiche de personnage de la série <mark>Final Space</mark>. La page d'accueil devra afficher une liste des personnages. Lorsque l'on clique sur un personnage, on est redirigé vers une page qui affiche les détails de ce dernier. Puis, il y aura une page à propos pour présenter le site.
+          Le but est de créer un site d'affiche de personnage de la série <mark>Final Space</mark>. La page d'accueil devra afficher une liste des personnages. Lorsque l'on clique sur un personnage, on est redirigé vers une page qui affichera les détails de ce dernier.
+          <br />
+          Pour ceux qui veulent aller jeter un oeil à l'API : <a href="https://finalspaceapi.com/docs/endpoints/character/" target="_blank" rel="noreferrer" className="underline text-blue-300">Final Space API</a>
         </p>
         <div>
           <h3>Etape 1</h3>
           <RequireNotion notion={[7]} />
           <p>
-            Vous allez créer/contruire 3 pages distinctes. Deux pages en statique, dont une pour <mark>accueil</mark> et une autre pour <mark>à propos</mark>. Puis une page dynamique pour le <mark>personnage</mark> qui sera sélectionné. La page d'accueil étant la page par défaut <mark>page.js</mark>, il n'y a pas besoin de la créer.
+            Vous allez créer/contruire 3 pages distinctes. Deux pages en statique, dont une pour <mark>Accueil</mark> et une autre pour <mark>A propos</mark>. Puis une page dynamique pour le <mark>personnage</mark> qui sera sélectionné. La page d'accueil étant la page par défaut <mark>page.js</mark>, il n'y a pas besoin de la créer.
           </p>
         </div>
         <div>
@@ -90,9 +92,9 @@ if (fabrication == "France") {
 
         <div>
           <h3>Etape 3</h3>
-          <RequireNotion notion={[9, 11]} />
+          <RequireNotion notion={[9, 11, 12]} />
           <p>
-            Afficher la liste des personnages sur la page <mark>Accueil</mark> à l'aide d'une API dans un <mark>useEffect</mark>. Chaque objet contient les propriétés suivantes : <mark className='cursor-copy' onClick={handleClick}>id</mark>, <mark className='cursor-copy' onClick={handleClick}>name</mark> pour son nom et <mark className='cursor-copy' onClick={handleClick}>img_url</mark> pour l'url de l'image.
+            Afficher la liste des personnages dans la page <mark>Accueil</mark> à l'aide d'une API dans un <mark>useEffect</mark>. Chaque objet contient les propriétés suivantes : <mark className='cursor-copy' onClick={handleClick}>id</mark>, <mark className='cursor-copy' onClick={handleClick}>name</mark> pour son nom et <mark className='cursor-copy' onClick={handleClick}>img_url</mark> pour l'url de l'image.
             <br />
             Voici l'url : <mark className='cursor-copy' onClick={handleClick}>https://finalspaceapi.com/api/v0/character/
             </mark>
@@ -101,9 +103,10 @@ if (fabrication == "France") {
 
         <div>
           <h3>Etape 4</h3>
-          <RequireNotion notion={[12]} />
           <p>
-            Créer un lien sur personnage pour rediriger vers la page dynamique <mark>personnage</mark>, avec son id dans l'url. Utiliser la méthode des routes dynamique et non pas <mark>#</mark> pour faire la redirection. La page <mark>personnage</mark> devra afficher :
+            Créer un lien sur les personnages pour rediriger vers la page dynamique <mark>personnage</mark>, avec son id dans l'url. Utiliser la méthode des routes dynamique et non pas <mark>#</mark> pour faire la redirection.
+            <br />
+            Ensuite, dans la page <mark>personnage</mark> vous dever afficher :
           </p>
           <ul className="list-[circle]">
             <li>Nom : <mark className='cursor-copy' onClick={handleClick}>name</mark></li>
@@ -125,9 +128,26 @@ if (fabrication == "France") {
           <h3>Etape 5</h3>
           <RequireNotion notion={[10]} />
           <p>
-            Vous allez devoir créer un mode sombre pour le site. Pour cela, vous allez créer un composant <mark>Theme</mark> qui contiendra un bouton pour changer le thème. Ce composant devra être présent sur toutes les pages. <u>Vous allez devoir utiliser useState, useEffect et un gestionnaire d'événement pour changer le thème.</u> Evidemment l'état ne devra pas être stocké dans le composant <mark>Theme</mark>. 
+            En repartant de ce que vous avez fait, l'objectif est de limiter le nombre de personnage qui s'affichera dans la page <mark>accueil</mark>. L'API propose cette fonctionnalité grâce au paramètres <mark>?limit={'{number}'}</mark>.
+            <br />
+            Pour cela vous devez utiliser un <mark>input</mark> et lorsque l'on écrit dedans, on doit appuyer sur un bouton pour valider la saisie afin de mettre la page à jour avec le nombre de personnage demandé, et cela sans recharger la page.
+            <br /><br />
+            Vous devez utiliser :
+          </p>
+          <ul className="list-[circle]">
+            <li><mark>useState</mark> pour stocker la valeur de l'input.</li>
+            <li><mark>useEffect</mark> pour faire la requête à l'API.</li>
+            <li><mark>onChange</mark> pour enregistrer la saisie.</li>
+            <li><mark>onClick</mark> pour valider la saisie.</li>
+          </ul>
+          <p>
+            <br />
+            Vous devez également mettre un valeur par défaut au paramètre <mark>limit</mark>. Car si l'input n'est pas renseigné cela permet d'éviter que la page soit vide de contenu à son chargement ou que l'API ne renvoie une erreur.
+            <br /><br />
+            Voici l'url : <mark className='cursor-copy' onClick={handleClick}>https://finalspaceapi.com/api/v0/character/?limit={'{number}'}</mark>
           </p>
         </div>
+
       </div>
     </div>
   );

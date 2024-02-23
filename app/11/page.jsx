@@ -25,7 +25,7 @@ const Lesson = () => {
 }`}
       </FormatToCode>
       <p>
-        Dans cet exemple, nous avons une liste de posts. Nous utilisons la méthode <mark>{'map()'}</mark> pour parcourir chaque élément de la liste et afficher un élément {'<div>'} pour chaque post. Nous utilisons également la propriété <mark>key</mark> pour chaque élément {'<div>'}. La propriété {'key'} est utilisée par React pour identifier chaque élément de la liste. <u>Elle doit être unique pour chaque élément de la liste, elle est obligatoire et doit être placer dans l'élément parent.</u>
+        Dans cet exemple, nous avons une liste de posts. Nous utilisons la méthode <mark>{'map()'}</mark> pour parcourir chaque élément de la liste et l'afficher. Nous utilisons également la propriété <mark>key</mark> pour chaque élément {'<div>'}. La propriété <mark>key</mark> est utilisée par React pour identifier chaque élément de la liste. <u>Elle doit être unique pour chaque élément de la liste, elle est obligatoire et doit être placer dans l'élément parent.</u>
       </p>
 
     </div>

@@ -20,9 +20,7 @@ const Lesson = () => {
                     </li>
                     <li>Sécurisation des données sensibles en les gardant du côté serveur.
                     </li>
-                    <li>Mise en cache des résultats pour des performances améliorées et des coûts réduits.
-                    </li>
-                    <li>Réduction de la taille des bundles JavaScript côté client.
+                    <li>Mise en cache des résultats pour des performances améliorées.
                     </li>
                     <li>Affichage immédiat de la page et du contenu significatif sans attendre le JavaScript.
                     </li>
@@ -37,7 +35,6 @@ const Lesson = () => {
                 </p>
                 <FormatToCode language="jsx">
                     {`"use client"
-
 export default function Page() {
   return <div onClick={alert("Je clique")}>Ma page</div>
 };`}
@@ -53,7 +50,7 @@ export default function Page() {
                     </span>
                 </p>
                 <ol className="list-[circle] space-y-2 pt-2">
-                    <li>Permet d'utiliser useState, useEffect et les écouteurs d'événements, ce qui leur permet de fournir un retour immédiat à l'utilisateur et de mettre à jour l'interface utilisateur.
+                    <li>Permet d'utiliser useState {'(Hook)'}, useEffect {'(Hook)'} et les écouteurs d'événements, ce qui leur permet de fournir un retour immédiat à l'utilisateur et de mettre à jour l'interface utilisateur.
                     </li>
                     <li>Accès aux APIs du navigateur, comme la géolocalisation ou localStorage, ce qui vous permet de construire des interfaces utilisateur pour des cas d'utilisation spécifiques.
                     </li>

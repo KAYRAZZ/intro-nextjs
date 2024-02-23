@@ -1,25 +1,18 @@
-async function getPosts() {
-    const res = await fetch('https://api.themoviedb.org/3/movie/popular?language=fr-FR&page=1', {
-        method: 'GET',
-        headers: {
-            accept: 'application/json',
-            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3YzYyMmU0MmIwMTVkMmI2NGEzNjliNDE4YTdlNTYxYSIsInN1YiI6IjY1ZDVkMTkxMGU0ZmM4MDE4Njg0ZjY4NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.j20k-1Sg67KIXgdkjlSoPAvAY2PIV0tuS9jRFJHS1ys'
-        }
-    });
-    const data = await res.json();
-    return data.results;
-}
+"use client"
+import { useState, useEffect } from 'react';
+export default function Home() {
+    const [text, setText] = useState('');
+    const [isClicked, setIsClicked] = useState(false);
 
-export default async function Home() {
-    const posts = await getPosts();
-    console.log(posts);
+    useEffect(() => {
+        console.log(text);
+        setIsClicked(false);
+    }, [isClicked]);
+
     return (
         <div>
-            {posts && posts.map((post, index) => (
-                <div key={index}>
-                    <span>{post.title}</span>
-                </div>
-            ))}
+            <input className='text-black' type="text" value={text} onChange={e => setText(e.target.value)} />
+            <button onClick={() => setIsClicked(true)}>Valider</button>
         </div>
     );
 }

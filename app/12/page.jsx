@@ -40,10 +40,12 @@ const Lesson = () => {
       <div>
         <h2>Qu'est-ce qu'un hook</h2>
         <p>
-          Un Hook est une fonction spéciale qui vous permet d'utiliser les fonctionnalités de React à partir de composants fonctionnels. Les Hooks permettent aux développeurs d'utiliser <mark>useState</mark> et d'autres fonctionnalités de React. Il existe plusieurs hooks, parmis les plus utilisés, il y a <mark>useState</mark> et <mark>useEffect</mark>.
+          Un Hook est une fonction spéciale qui vous permet d'utiliser les fonctionnalités de React à partir de composants fonctionnels. Il existe plusieurs Hooks, parmis les plus utilisés, il y a <mark>useState</mark> et <mark>useEffect</mark>.
 
           <br /><br />
-          Mais il y a un élément à prendre en compte, le <mark>render</mark>. Le rendu {"(ou 'render' en anglais)"} est un concept central en React. Il s'agit du processus par lequel React met à jour le DOM {"(Document Object Model)"} de la page web avec le contenu de vos composants. Le rendu est déclenché par des changements d'état ou de propriétés, et il est ce qui permet à votre application de réagir aux interactions de l'utilisateur. React appelle la méthode render à chaque fois qu'il doit mettre à jour le DOM pour ce composant. Cela peut se produire pour plusieurs raisons, par exemple si l'état du composant change {"(avec useState)"}, ou si le composant est rendu pour la première fois.
+          Mais il y a un élément à prendre en compte, le <mark>render</mark>. Le rendu {"(ou 'render' en anglais)"} est un concept central en React. Il s'agit du processus par lequel React met à jour le DOM {"(Document Object Model)"} de la page web avec le contenu de vos composants.
+          <br /><br />
+          <u>Le rendu est déclenché par des changements d'état ou de propriétés</u>, et il est ce qui permet à votre application de réagir aux interactions de l'utilisateur. React appelle la méthode render à chaque fois qu'il doit mettre à jour le DOM pour ce composant. Cela peut se produire pour plusieurs raisons, par exemple si l'état du composant change {"(avec useState)"}, ou si le composant est rendu pour la première fois.
 
 
         </p>
@@ -177,6 +179,7 @@ export default function Page() {
   const handleVar = () => {
     varCount = varCount + 1;
   }
+  return (...)
 }`}
         </FormatToCode>
         <div className="sandBox">
@@ -204,7 +207,8 @@ export default function Page() {
         <p>
           Il existe plusieurs cas d'utilisation de <mark>useEffect</mark>.
           <br /><br />
-          <span className="font-semibold">Cas n°1 :</span>
+          <span className="font-semibold">Cas n°1 :</span><br />
+          Dans cet exemple, <mark>useEffect</mark> est <u>appelé à chaque rendu du composant</u> et après chaque mise à jour du DOM.
         </p>
         <FormatToCode language="jsx">
           {`useEffect(() => {
@@ -212,9 +216,8 @@ export default function Page() {
 })`}
         </FormatToCode>
         <p>
-          Dans cet exemple, <mark>useEffect</mark> est <u>appelé à chaque rendu du composant</u> et après chaque mise à jour du DOM.
-          <br /><br />
-          <span className="font-semibold">Cas n°2 :</span>
+          <span className="font-semibold">Cas n°2 :</span><br />
+          Dans cet exemple, <mark>useEffect</mark> est <u>appelé qu'une seule fois</u>, lors du le premier rendu du composant. Cela peut être utile pour effectuer de la récupération de données.
         </p>
         <FormatToCode language="jsx">
           {`useEffect(() => {
@@ -222,11 +225,8 @@ export default function Page() {
 }, [])`}
         </FormatToCode>
         <p>
-          Dans cet exemple, <mark>useEffect</mark> est <u>appelé qu'une seule fois</u>, lors du le premier rendu du composant. Cela peut être utile pour effectuer de la récupération de données.
-
-          <br /><br />
-          <span className="font-semibold">Cas n°3 :</span>
-
+          <span className="font-semibold">Cas n°3 :</span><br />
+          Dans cet exemple, <mark>useEffect</mark> est <u>appelé à chaque fois</u> que la valeur <mark>count</mark> change mais aussi au premier rendu du composant. C'est une syntaxe qui permet d'écouteur les changements d'état.
         </p>
         <FormatToCode language="jsx">
           {`const [count, setCount] = useState(0);
@@ -236,14 +236,11 @@ useEffect(() => {
 }, [count])`}
         </FormatToCode>
         <p>
-          Dans cet exemple, <mark>useEffect</mark> est <u>appelé à chaque fois</u> que la valeur <mark>count</mark> change. C'est une syntaxe qui permet d'écouteur les changements d'état.
-
-          <br /><br />
+          <br />
           Si l'on souhaite récupérer des données depuis une API, on peut utiliser <mark>useEffect</mark>. Voici un exemple :
         </p>
         <FormatToCode language="jsx">
           {`import { useState, useEffect } from 'react';
-
 function Example() {
   const [posts, setPosts] = useState([]);
 
@@ -259,14 +256,13 @@ function Example() {
   //   {id: 2, title: 'post2'}, 
   //   {id: 3, title: 'post3'}
   // ]
-
     fetchData();
-  }, []); // Le tableau vide signifie que l'effet ne s'exécute qu'au montage du composant
+  }, []);
 
   return (
     <div>
       <div>
-        {posts.map((post, index) => (
+        {posts && posts.map((post, index) => (
           <div key={post.id}>
             <span>{post.title}</span>
           </div>
@@ -277,10 +273,10 @@ function Example() {
 }`}
         </FormatToCode>
         <p>
-          Dans cet exemple, <mark>useEffect</mark> effectue une requête et met à jour l'état local <mark>post</mark> avec les données reçues. Le tableau vide signifie que l'effet ne s'exécute qu'au montage du composant.
+          Dans cet exemple, <mark>useEffect</mark> effectue une requête et met à jour l'état local <mark>posts</mark> avec les données reçues. Le tableau vide dans <mark>useEffect</mark> signifie que l'effet ne s'exécute qu'au montage du composant.
 
           <br /><br />
-          Async et await sont utilisés pour attendre que la promesse soit résolue. Les promesses en JavaScript sont un moyen de gérer les opérations asynchrones, qui sont des opérations qui prennent du temps pour se terminer, comme les requêtes réseau. Elles fournissent une manière de dire : "Fais cette tâche et quand tu auras fini, fais ceci".
+          <mark>Async</mark> et <mark>await</mark> sont utilisés pour attendre que la promesse soit résolue. Les promesses en JavaScript sont un moyen de gérer les opérations asynchrones, qui sont des opérations qui prennent du temps pour se terminer, comme les requêtes réseau. Elles fournissent une manière de dire : "Fais cette tâche et quand tu auras fini, passe à la suite".
           <br /><br />
           Il faut déclarer <mark>async</mark> devant  <u>function</u> pour pouvoir utiliser <mark>await</mark> à l'intérieur.
         </p>

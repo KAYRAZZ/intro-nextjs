@@ -39,7 +39,7 @@ const Lesson = () => {
         <p>
           Remarquez que <mark>{'<MonBouton />'}</mark> commence par une majuscule. C'est ainsi que vous savez qu'il s'agit d'un composant. Noter également que <mark>{'<MonBouton />'}</mark> est <u>auto-fermante</u>, c'est-à-dire qu'il n'a pas de balise de fermeture.
           <br /><br />
-          Il faut également exporter le composant pour pouvoir l'utiliser. Pour ce faire, il faut ajouter la ligne suivante à la fin du fichier : <mark>export default MonBouton</mark>. Il est également possible de l'écrire directement devant la fonction.
+          Il faut également exporter le composant pour pouvoir l'utiliser. Pour ce faire, il existe deux facon de le faire. La première est de déclarer une fonction et de l'exporter à la fin du fichier. La deuxième est de déclarer une fonction et de l'exporter directement.
         </p>
 
         <FormatToCode language="jsx">
@@ -74,7 +74,9 @@ export default function Page() {
         Par contre, si votre composant/fonction n'est pas exporté par défaut, <u>vous devez l'importer avec des accolades</u>.
       </p>
       <FormatToCode language="jsx">
-        {`import { MonBouton } from './components/MonBoutonComponent'`}
+        {`export function MonBouton() ...
+// ----------------
+import { MonBouton } from './components/MonBoutonComponent'`}
       </FormatToCode>
     </div>
   );

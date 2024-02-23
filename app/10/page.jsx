@@ -18,7 +18,8 @@ const Lesson = () => {
           <mark>onClick</mark> est un gestionnaire d'événement qui est appelé lorsque l'utilisateur clique sur un élément. Voici un exemple d'utilisation avec une fonction fléchée :
         </p>
         <FormatToCode language="jsx">
-          {`export default function Page() {
+          {`"use client"
+export default function Page() {
   return (
     <button onClick={() => alert('Bouton cliqué!')}>
       Clique sur moi
@@ -34,33 +35,46 @@ const Lesson = () => {
         <FormatToCode language="jsx">
           {`"use client"
 export default function Page() {
-  const handleClick = () => {
+  function handleClick() {
     alert('Bouton cliqué!');
   }
 
   return (
-    <button onClick={handleClick}>
-      Aller clique ici
-    </button>
+    <div>
+      <button onClick={handleClick}>
+        Aller clique ici
+      </button>
+      <button onClick={() => alert("Bouton cliqué!")}>
+        Non clique là
+      </button>
+    </div>
   );
 };`}
         </FormatToCode>
         <p>
           Ici, <mark>handleClick</mark> est une fonction qui est appelée lorsque le bouton est cliqué. La convention veut que les noms des fonctions appelées lors d'un événement, commencent par <mark>handle</mark>.
           <br /><br />
-          De plus, il est possible de passer des paramètres à la fonction appelée. Pour envoyer une information, <u>une fonction fléchée est obligatoire dans ce cas-là</u>, à l'intérieur du onClick, sinon le code sera directement exécuté au chargement de la page. Voici un exemple :
+          De plus, il est possible de passer des paramètres à la fonction appelée. Pour envoyer une information, <u>une fonction fléchée est obligatoire dans ce cas-là</u>, à l'intérieur du onClick, sinon le code sera directement exécuté au chargement de la page.
         </p>
         <FormatToCode language="jsx">
           {`"use client"
 export default function Page() {
-  const handleClick = (text) => {
+  function handleClick(text) {
     alert(text);
   }
 
   return (
-    <button onClick={() => handleClick("Salut!")}>
-      Clique et je te dirai quelque chose
-    </button>
+    <div>
+      // Quand on clique
+      <button onClick={() => handleClick("Salut!")}>
+        Clique et je te dirai quelque chose
+      </button>
+
+      // Quand la page se lance
+      <button onClick={handleClick("Salut!")}>
+        Clique et je te dirai avant l'autre là
+      </button>
+    </div>
   );
 };`}
         </FormatToCode>
@@ -73,18 +87,19 @@ export default function Page() {
         </p>
         <FormatToCode language="jsx">
           {`"use client"
+import { useState } from 'react';
 export default function Page() {
+  const [value, setValue] = useState('');
   return (
     <input 
     type="text" 
-    onChange={(event) => console.log(event.target.value)} />
+    onChange={(e) => setValue(e.target.value)} 
+    />
   );
 };`}
         </FormatToCode>
-
-
       </div>
-    </div >
+    </div>
   );
 }
 

@@ -1,5 +1,23 @@
 [
     {
+        "title": "Exercices",
+        "lesson": 13,
+        "subMenus": [
+            {
+                "title": "Exercice n°0",
+                "lesson": 0
+            },
+            {
+                "title": "Exercice n°1",
+                "lesson": 1
+            },
+            {
+                "title": "Projet : Création d'un site",
+                "lesson": 2
+            }
+        ]
+    },
+    {
         "title": "Qu'est-ce que Next.js ?",
         "lesson": 1
     },
@@ -154,24 +172,6 @@
             {
                 "title": "useEffect",
                 "lesson": 3
-            }
-        ]
-    },
-    {
-        "title": "Exercices",
-        "lesson": 13,
-        "subMenus": [
-            {
-                "title": "Exercice n°0",
-                "lesson": 0
-            },
-            {
-                "title": "Exercice n°1",
-                "lesson": 1
-            },
-            {
-                "title": "Projet : Création d'un site",
-                "lesson": 2
             }
         ]
     }

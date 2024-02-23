@@ -10,10 +10,10 @@ const Lesson = () => {
                 <p>
                     Dans Next.js, la création de pages suit une approche particulière. Les pages sont créées dans le répertoire <mark>app</mark>. Pour ce faire, il faut créer un dossier qui <u>portera le nom de la route dans l'URL</u>, et à l'intérieur de ce dossier, créer un fichier nommé <mark>page.jsx</mark> ou <mark>page.js</mark>, c'est ce fichier qui rendrera le contenu de la page. Nommer ce fichier différemment, fera que cette page sera inatteignable.
                     <br /><br />
-                    Noter que les fichiers <mark>page.jsx</mark> ou <mark>page.js</mark> doivent être exportés par défaut.
+                    Noter que les fichiers <mark>page.jsx</mark> ou <mark>page.js</mark> doivent être exportés par défaut. Vous pouvez nommer la fonction à votre sauce, elle n'a aucune importance.
                 </p>
                 <FormatToCode language="jsx">
-                    {`export default function Page() {
+                    {`export default function Sauce() {
   return <div>Ma page</div>
 };`}
                 </FormatToCode>
@@ -24,10 +24,10 @@ const Lesson = () => {
                     Les routes dynamiques sont utilisées pour créer des pages qui ont des paramètres variables dans leur URL. C'est utile lorsque vous voulez créer plusieurs URL qui partagent la même structure de page.
 
 
-                    Dans le dossier <mark>app</mark>, il est nécessaire de créer un dossier avec des crochets <mark>{"[ ]"}</mark> dont le nom sera le paramètre à récupérer. Par exemple, <mark>app/posts/{"[post]"}/page.js</mark>, les crochets indiquent que cette partie de l'URL est dynamique. C'est-à-dire qu'on va pouvoir accéder à cette route avec plusieurs valeurs pour <mark>post</mark>.
+                    Pour cela, il faut créer un dossier avec des crochets <mark>{"[ ]"}</mark> dont le nom sera le paramètre à récupérer. Par exemple, <mark>app/posts/{"[post]"}/page.js</mark>, les crochets indiquent que cette partie de l'URL est dynamique. C'est-à-dire qu'on va pouvoir accéder à cette route avec plusieurs valeurs pour <mark>post</mark>.
                 </p>
 
-                <table className="tracking-wider">
+                <table>
                     <thead>
                         <tr>
                             <th>Route</th>
