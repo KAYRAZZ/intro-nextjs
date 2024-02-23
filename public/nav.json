@@ -1,7 +1,7 @@
 [
     {
         "title": "Exercices",
-        "lesson": 13,
+        "lesson": 14,
         "subMenus": [
             {
                 "title": "Exercice n°0",
@@ -174,5 +174,9 @@
                 "lesson": 3
             }
         ]
+    },
+    {
+        "title": "CSS en Next.js",
+        "lesson": 13
     }
 ]
