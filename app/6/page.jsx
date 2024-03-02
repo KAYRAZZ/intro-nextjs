@@ -8,7 +8,7 @@ const Lesson = () => {
       <div>
         <h2>Qu'est-ce qu'un composant</h2>
         <p>
-          Les composants vous permettent de découper l’interface utilisateur en éléments indépendants et réutilisables, vous permettant ainsi de considérer chaque élément de manière isolée. Il possède sa propre logique et sa propre apparence. Un composant peut être aussi petit qu'une balise bouton ou aussi grand qu'une page entière. Par convention, ils sont placés dans le dossier <mark>components</mark> à l'intérieur du dossier <mark>app</mark>. <u>Ils doivent obligatoirement porter une majuscule.</u>
+          Les composants vous permettent de découper l’interface utilisateur en éléments indépendants et réutilisables, vous permettant ainsi de considérer chaque élément de manière isolée. Il possède sa propre logique et sa propre apparence. Un composant peut être aussi petit qu'une balise bouton ou aussi grand qu'une page entière. Par convention, ils sont placés dans le dossier <mark>components</mark> à l'intérieur du dossier <mark>app</mark>. <u>Ils doivent obligatoirement porter la majuscule.</u>
           <br /><br />
           Voici un exemple :
         </p>

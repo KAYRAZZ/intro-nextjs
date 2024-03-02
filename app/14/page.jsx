@@ -84,7 +84,7 @@ if (fabrication == "France") {
         </div>
         <div>
           <h3>Etape 2</h3>
-          <RequireNotion notion={[6, 8, 13]} />
+          <RequireNotion notion={[6, 8, 12]} />
           <p>
             Créer un composant <mark>Header</mark> qui sera présent sur toutes les pages en l'insérant que dans un seul fichier. Ce composant devra contenir les liens des pages <mark>Accueil</mark> et <mark>A propos</mark>.
           </p>
@@ -92,7 +92,7 @@ if (fabrication == "France") {
 
         <div>
           <h3>Etape 3</h3>
-          <RequireNotion notion={[9, 11, 12]} />
+          <RequireNotion notion={[9, 10, 11]} />
           <p>
             Afficher la liste des personnages dans la page <mark>Accueil</mark> à l'aide d'une API dans un <mark>useEffect</mark>. Chaque objet contient les propriétés suivantes : <mark className='cursor-copy' onClick={handleClick}>id</mark>, <mark className='cursor-copy' onClick={handleClick}>name</mark> pour son nom et <mark className='cursor-copy' onClick={handleClick}>img_url</mark> pour l'url de l'image.
             <br />
@@ -126,7 +126,7 @@ if (fabrication == "France") {
 
         <div>
           <h3>Etape 5</h3>
-          <RequireNotion notion={[10]} />
+          <RequireNotion notion={[13]} />
           <p>
             En repartant de ce que vous avez fait, l'objectif est de limiter le nombre de personnage qui s'affichera dans la page <mark>accueil</mark>. L'API propose cette fonctionnalité grâce au paramètres <mark>?limit={'{number}'}</mark>.
             <br />

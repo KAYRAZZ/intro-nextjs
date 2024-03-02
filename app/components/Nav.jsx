@@ -106,7 +106,7 @@ const SideNav = () => {
     // }, []);
 
     return (
-        <div ref={refSidebar} className="sidebar h-screen w-[400px] max-sm:w-screen fixed z-10 overflow-auto border-r-2 border-white">
+        <div ref={refSidebar} className="sidebar h-screen w-[400px] max-sm:w-screen fixed overflow-auto z-10 border-r-2 border-white">
             <Link href={"/"} className='flex justify-center text-white text-center font-bold py-6 text-2xl'>Initiation Next.JS</Link>
             <TbAlignJustified onClick={showSidebar} className='z-50 bg-white cursor-pointer text-black w-[35px] h-[35px] fixed top-[10px] left-[10px] hover:bg-slate-200 rounded' />
 
@@ -116,7 +116,7 @@ const SideNav = () => {
                     onClick={() => handleMenuClick(index, menu)}
                     className={`relative border-gray-300 flex flex-col justify-between items-center cursor-pointer border-t-2 ${index === menus.length - 1 ? 'border-b-2' : ""}`}
                 >
-                    <div className={`transition-all duration-500 hover:bg-[rgb(30,0,80)] w-full relative flex flex-row justify-between p-3 ${pathname === `/${menu.lesson}` && 'bg-[rgb(30,0,35)]'}`}>
+                    <div className={`transition-all duration-500 hover:bg-[rgb(20,0,45)] w-full relative flex flex-row justify-between p-3 ${pathname === `/${menu.lesson}` && 'bg-[rgb(20,0,35)]'}`}>
                         <span className="text-white text-lg w-full text-left">{menu.title}</span>
                         <span className='m-auto text-white'>
                             {menu.subMenus && (<FaCaretRight className={`transition-all duration-300 ${activeMenu === index ? "rotate-90" : "rotate-0"}`} />)}
@@ -127,7 +127,7 @@ const SideNav = () => {
                         <div ref={el => contentSpace.current[index] = el}
                             style={{ maxHeight: `${heights[index]}` }} className="w-full transition-all duration-500 overflow-hidden flex flex-col">
                             {menu.subMenus.map((subMenu, i) => (
-                                <Link href={`/${menu.lesson}#${subMenu.lesson}`} key={i} onClick={(event) => event.stopPropagation()} className={`transition-all duration-300 bg-[rgb(30,0,40)] hover:bg-[rgb(30,0,30)] p-3 text-sm w-full text-left border-gray-600 border-t ${index === menu.subMenus.length - 1 ? 'border-b' : ""}`}
+                                <Link href={`/${menu.lesson}#${subMenu.lesson}`} key={i} onClick={(event) => event.stopPropagation()} className={`transition-all duration-300 bg-[rgb(20,0,40)] hover:bg-[rgb(20,0,30)] p-3 text-sm w-full text-left border-gray-600 border-t ${index === menu.subMenus.length - 1 ? 'border-b' : ""}`}
                                 >{subMenu.title}</Link>
                             ))}
                         </div>
