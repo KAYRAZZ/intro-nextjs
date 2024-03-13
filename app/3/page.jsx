@@ -47,7 +47,7 @@ const Lesson = () => {
                 </p>
             </div>
 
-            <div>
+            <div id="3">
                 <h2>Arborescence</h2>
                 <p>
                     L'arborescence d'un projet <mark>Next.js</mark> est composée de plusieurs dossiers et fichiers. Voila les éléments principaux :
