@@ -13,6 +13,7 @@ const SideNav = () => {
     const [menus, setMenus] = useState([]);
 
     useEffect(() => {
+        // Récupère les menus
         const fetchMenus = async () => {
             const response = await fetch('/nav.json');
             const data = await response.json();
@@ -21,7 +22,6 @@ const SideNav = () => {
         }
         fetchMenus();
     }, []);
-
 
 
     const handleMenuClick = (index, menu) => {
@@ -85,25 +85,6 @@ const SideNav = () => {
             window.removeEventListener('resize', handleResize);
         }
     }, []);
-
-    // useEffect(() => {
-    //     // Evite le défilement si l'écran est inférieur à 640px lors de d'un resize
-    //     const handleResize = () => {
-    //         if (window.innerWidth >= 640) {
-    //             document.body.style.overflow = 'auto';
-    //         } else {
-    //             document.body.style.overflow = 'hidden';
-    //         }
-    //     };
-
-    //     // Ajoutez le gestionnaire d'événement
-    //     window.addEventListener('resize', handleResize);
-
-    //     // Supprimez le gestionnaire d'événement lors du nettoyage
-    //     return () => {
-    //         window.removeEventListener('resize', handleResize);
-    //     };
-    // }, []);
 
     return (
         <div ref={refSidebar} className="sidebar h-screen w-[400px] max-sm:w-screen fixed overflow-auto z-10 border-r-2 border-white">

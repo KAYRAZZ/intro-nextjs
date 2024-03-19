@@ -43,7 +43,7 @@ export default function Page() {
                     Dans cet exemple, le composant <mark>Page</mark> est rendu côté client. Lorsque l'utilisateur clique sur la page, une alerte s'affiche. Pour cela, il faut ajouter <mark>"use client"</mark> <u> tout en haut de la page</u> pour indiquer que ce composant doit être rendu côté client afin de pouvoir utiliser l'écouteur d'événement <mark>onClick</mark> ou les <mark>Hooks</mark> que l'on verra plus tard.
                     <br /><br />
 
-                    Maintenant, tous les composants qui sont rendus par ce composant, vont être des clients components. Autrement dit, si vous avez un composant qui est rendu côté client, tous les composants enfants de ce composant seront également rendus côté client.
+                    Maintenant, si vous avez un composant qui est rendu côté client, tous les composants enfants de ce composant seront également rendus côté client.
                     <br /><br />
 
                     <span className="font-semibold">Il y a plusieurs avantages à effectuer le rendu côté client, notamment :

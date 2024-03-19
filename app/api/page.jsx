@@ -44,7 +44,7 @@ export default async function Home() {
         <br />
         Les promesses en JavaScript sont un moyen de gérer les opérations asynchrones, qui sont des opérations qui prennent du temps pour se terminer, comme les requêtes réseau. Elles fournissent une manière de dire : "Fais cette tâche et quand tu auras fini, fais ceci".
         <br /><br />
-        Il faut déclarer <mark>async</mark> devant  <u>function</u> pour pouvoir utiliser <mark>await</mark> à l'intérieur.
+        Il faut déclarer <mark>async</mark> devant <u>function</u> pour pouvoir utiliser <mark>await</mark> à l'intérieur.
       </p>
 
     </div>

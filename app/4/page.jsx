@@ -34,8 +34,6 @@ document.body.appendChild(h1);`}
                 <p>
                     La différence entre les extensions de fichiers <mark>js</mark> et <mark>jsx</mark> réside principalement dans la façon dont le code est traité par les outils de développement.
                     <br /><br />
-                    En général, les fichiers avec l'extension <mark>.jsx</mark> sont utilisés lorsque vous écrivez du code qui utilise la syntaxe JSX. Cependant, avec des outils modernes de développement JavaScript comme Babel et Webpack, vous pouvez également utiliser la syntaxe JSX dans des fichiers avec l'extension <mark>.js</mark>.
-                    <br /><br />
                     L'utilisation de l'extension <mark>.jsx</mark> peut aider à indiquer clairement que le fichier contient du JSX, ce qui peut rendre votre code plus facile à comprendre pour d'autres développeurs.
                     <br /><br />
                     Bien qu'il soit préférable de nommer vos fichiers contenant du JSX avec l'extension <mark>.jsx</mark> pour éviter les erreurs potentielles, le choix entre les deux extensions devient une question de préférence personnelle et des conventions de votre équipe de développement.

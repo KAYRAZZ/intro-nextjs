@@ -48,7 +48,7 @@ const Lesson = () => {
 }`}
         </FormatToCode>
         <p>
-          Dans du code JSX, <u>il est obligatoire d'avoir un élément parent</u>, qui, dans cette exemple, est représenté par <mark>{"<> </>"}</mark>. Noter que nous avons utilisé <mark>{"<> </>"}</mark> pour englober les éléments, c'est une syntaxe raccourcie pour éviter d'avoir à créer un élément parent dans le code HTML. Vous pouvez également utiliser <mark>{"<div>"}</mark> ou tout autre élément HTML à la place. Ce qui signifie, que dans le code HTML, il n'y aura que la balise <mark>{"<h1>"}</mark> et les deux balises <mark>{"<h2>"}</mark> et non pas un élément <mark>{"<div>"}</mark> qui englobe les trois balises.
+          Dans du code JSX, <u>il est obligatoire d'avoir un élément parent</u>, qui, dans cette exemple, est représenté par <mark>{"<> </>"}</mark>. Noter que nous avons utilisé <mark>{"<> </>"}</mark> pour englober les éléments, c'est une syntaxe raccourcie pour éviter d'avoir à créer un élément parent dans le code HTML. Vous pouvez également utiliser <mark>{"<div>"}</mark> ou tout autre élément HTML à la place. Ce qui signifie que dans cette exemple, dans le code HTML, il n'y aura que la balise <mark>{"<h1>"}</mark> et les deux balises <mark>{"<h2>"}</mark> et non pas un élément <mark>{"<div>"}</mark> qui englobe ces trois balises.
         </p>
       </div>
 
@@ -68,9 +68,9 @@ const Lesson = () => {
     <>
       <h1>Bonjour et bienvenue!</h1>
       {
-        (lastName || lastName == "EncoreMoi") ? 
+        (lastName == "EncoreMoi") ? // if
         <h2>Nom de famille, {lastName}</h2>
-        :
+        : // else
         (<div>
           <h2>Non de famille non renseigné</h2>
           <span>{message}</span>
@@ -83,7 +83,7 @@ const Lesson = () => {
         </FormatToCode>
 
         <p>
-          Dans cet exemple, l'expression JSX affiche le nom de famille si la constante <mark>lastName</mark> est définie ou si <mark>lastName</mark> est égale  à <mark>"EncoreMoi"</mark>, sinon elle affiche le contenu situé dans le <mark>else</mark>. Remarquer que nous avons utilisé <mark>{"{ }"}</mark> pour englober notre condition. Cela permet de spécifier que nous voulons utiliser du <mark>JavaScript</mark>. De plus, dans le <mark>else</mark> nous avons englober tous les éléments dans un <mark>div</mark> dû au principe de l'élément parent.
+          Dans cet exemple, l'expression JSX affiche le nom de famille si <mark>lastName</mark> est égale  à <mark>"EncoreMoi"</mark>, sinon elle affiche le contenu situé dans le <mark>else</mark>. Remarquer que nous avons utilisé <mark>{"{ }"}</mark> pour englober notre condition. Cela permet de spécifier que nous voulons utiliser du <mark>JavaScript</mark>. De plus, dans le <mark>else</mark> nous avons englober tous les éléments dans un <mark>div</mark> dû au principe de l'élément parent.
           <br /><br />
 
           Dans l'exemple suivant, l'expression JSX affiche le nom de famille si la constante <mark>lastName</mark> est définie. Cela fonctionne si <mark>lastName</mark> est une chaîne de caractères non vide, un nombre différent de 0, un objet, etc. L'opérateur <mark className="font-sans">&&</mark> est utilisé pour afficher un élément si une condition est vraie, il n'y a pas de <mark>else</mark>.

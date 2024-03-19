@@ -140,8 +140,26 @@
         "lesson": 10
     },
     {
-        "title": "Les hooks",
+        "title": "Les gestionnaires d'événements",
         "lesson": 11,
+        "subMenus": [
+            {
+                "title": "Qu'est-ce qu'un gestionnaire d'événement",
+                "lesson": 1
+            },
+            {
+                "title": "onClick",
+                "lesson": 2
+            },
+            {
+                "title": "onChange",
+                "lesson": 3
+            }
+        ]
+    },
+    {
+        "title": "Les hooks",
+        "lesson": 12,
         "subMenus": [
             {
                 "title": "Qu'est-ce qu'un hook",
@@ -159,24 +177,6 @@
     },
     {
         "title": "CSS en Next.js",
-        "lesson": 12
-    },
-    {
-        "title": "Les gestionnaires d'événements",
-        "lesson": 13,
-        "subMenus": [
-            {
-                "title": "Qu'est-ce qu'un gestionnaire d'événement",
-                "lesson": 1
-            },
-            {
-                "title": "onClick",
-                "lesson": 2
-            },
-            {
-                "title": "onChange",
-                "lesson": 3
-            }
-        ]
+        "lesson": 13
     }
 ]

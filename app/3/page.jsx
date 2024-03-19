@@ -19,7 +19,7 @@ const Lesson = () => {
             <div>
                 <h2>Installer Next.js (à ne pas réaliser)</h2>
                 <p>
-                    Les fichiers de l’installation vous sont déjà fournis car l'installation ne fonctionne pas sur les ordinateurs du lycée. Voici tout de même comment l’installer. <u>Attention où vous placez le dossier car Next.js ne supporte pas les espaces dans les chemins.</u> Pour installer un projet Next.js, il faut au préalable <mark>Node.js</mark> d'installé sur votre machine.
+                    Les fichiers vous sont déjà fournis car l'installation prendrait trop de temps. Voici tout de même comment l’installer. <u>Attention où vous placez le dossier car Next.js ne supporte pas les espaces dans les chemins.</u> Pour installer un projet Next.js, il faut au préalable <mark>Node.js, React, Next.js</mark> d'installé sur votre machine.
                     <br />
                     Ensuite, dans un terminal tapez la commande suivante : <mark className='cursor-copy' onClick={handleClick}>npx create-next-app {'<nom-du-projet>'}</mark>. Cette commande va créer un nouveau dossier avec le nom que vous avez spécifié, et y installer tous les fichiers nécessaires pour démarrer un projet Next.js.
                 </p>
@@ -36,7 +36,7 @@ const Lesson = () => {
             <div id="2">
                 <h2>Lancer un projet Next.js</h2>
                 <p>
-                    A partir du terminal, placez vous à la racine du projet Next.js et taper la commande suivante, qui démarrera le projet <mark className='cursor-copy' onClick={handleClick}>npm run dev</mark>. Le processus de démarrage du serveur de développement de Next.js peut prendre quelques instants. Vous verrez des messages dans votre terminal indiquant que le serveur est en cours de démarrage et la disponibilité de l'application.
+                    A partir du terminal, placez vous à la racine du projet Next.js et taper la commande suivante, qui démarrera le projet <mark className='cursor-copy' onClick={handleClick}>npm run dev</mark>. Vous verrez des messages dans votre terminal indiquant que le serveur est en cours de démarrage et la disponibilité de l'application.
                     Une fois que le serveur de développement est démarré avec succès, ouvrez votre navigateur web et accédez à l'URL suivante <mark className='cursor-copy' onClick={handleClick}>http://localhost:3000</mark>.
                     <br /><br />
                     Par défaut, c’est le port <mark>3000</mark> qui est utilisé. Cependant, si ce port est déjà utilisé par une autre application sur votre machine, Next.js utilisera le port suivant disponible. Vous pouvez également spécifier un port différent en utilisant l'option <mark className='cursor-copy' onClick={handleClick}>npx next dev -p {'<port>'}</mark>.

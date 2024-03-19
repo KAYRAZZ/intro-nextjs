@@ -29,7 +29,7 @@ const Exercice = () => {
         <h2>Exercice n°1</h2>
         <RequireNotion notion={[4, 5]} />
         <p>
-          L'objectif est d'afficher <mark>un article</mark> dans une balise <mark>{"<h2>"}</mark> avec comme texte <mark>"Panier : {'<nom de l\'article>'}"</mark> si la variable <mark>article</mark> est <mark>définie/non null</mark>, sinon afficher <mark>"Le panier est vide"</mark>. Ensuite, afficher un <mark>{"<span>"}</mark> avec le texte <mark>"Le produit a été fabriqué en France"</mark> si la variable <mark>fabrication</mark> est égale à <mark>"France"</mark>.
+          L'objectif est d'afficher <mark>un article</mark> dans une balise <mark>{"<h2>"}</mark> avec comme texte <mark>"Panier : {'<nom de l\'article>'}"</mark> si la variable <mark>article</mark> est <mark>définie/non null</mark>, sinon afficher <mark>"Le panier est vide"</mark>. Ensuite, afficher le texte <mark>"Le produit a été fabriqué en France"</mark> si la variable <mark>fabrication</mark> est égale à <mark>"France"</mark>.
           <br /><br />
           A partir du fichier Exo1.jsx recréer ce JavaScript en JSX :
         </p>
@@ -72,7 +72,7 @@ if (fabrication == "France") {
         <h2>Projet : Création d'un site</h2>
         <p>
           Le but est de créer un site d'affiche de personnage de la série <mark>Final Space</mark>. La page d'accueil devra afficher une liste des personnages. Lorsque l'on clique sur un personnage, on est redirigé vers une page qui affichera les détails de ce dernier. Pour cela on utilisera une API qui nous renverra les données des personnages.
-          <br />
+          <br /><br />
           Vous n'avez pas besoin de vous renseigner sur l'API mais pour ceux qui veulent aller jeter un oeil : <a href="https://finalspaceapi.com/docs/endpoints/character/" target="_blank" rel="noreferrer" className="underline text-blue-300">Final Space API</a>
         </p>
         <div>
@@ -84,15 +84,15 @@ if (fabrication == "France") {
         </div>
         <div>
           <h3>Etape 2</h3>
-          <RequireNotion notion={[6, 8, 12]} />
+          <RequireNotion notion={[6, 8, 13]} />
           <p>
-            Créer un composant <mark>Header</mark> qui sera présent sur toutes les pages en l'insérant que dans un seul fichier. Ce composant devra contenir les liens des pages <mark>Accueil</mark> et <mark>A propos</mark>.
+            Créer un composant <mark>Header</mark> qui sera présent sur toutes les pages <u>en l'insérant que dans un seul fichier</u>. Ce composant devra contenir les liens des pages <mark>Accueil</mark> et <mark>A propos</mark>.
           </p>
         </div>
 
         <div>
           <h3>Etape 3</h3>
-          <RequireNotion notion={[9, 10, 11]} />
+          <RequireNotion notion={[9, 10, 12]} />
           <p>
             Afficher la liste des personnages dans la page <mark>Accueil</mark> à l'aide d'une API dans un <mark>useEffect</mark>. Chaque objet contient les propriétés suivantes : <mark className='cursor-copy' onClick={handleClick}>id</mark>, <mark className='cursor-copy' onClick={handleClick}>name</mark> pour son nom et <mark className='cursor-copy' onClick={handleClick}>img_url</mark> pour l'url de l'image.
             <br />
@@ -126,9 +126,9 @@ if (fabrication == "France") {
 
         <div>
           <h3>Etape 5</h3>
-          <RequireNotion notion={[13]} />
+          <RequireNotion notion={[11]} />
           <p>
-            En repartant de ce que vous avez fait, l'objectif est de limiter le nombre de personnage qui s'affichera dans la page <mark>accueil</mark>. L'API propose cette fonctionnalité grâce au paramètres <mark>?limit={'{number}'}</mark>.
+            Maintenant l'objectif est de limiter le nombre de personnage qui s'affichera dans la page <mark>accueil</mark>. L'API propose cette fonctionnalité grâce au paramètres <mark>?limit={'{number}'}</mark>.
             <br />
             Pour cela vous devez utiliser un <mark>input</mark> et lorsque l'on écrit dedans, on doit appuyer sur un bouton pour valider la saisie afin de mettre la page à jour avec le nombre de personnage demandé, et cela sans recharger la page.
             <br /><br />
@@ -141,8 +141,6 @@ if (fabrication == "France") {
             <li><mark>onClick</mark> pour valider la saisie.</li>
           </ul>
           <p>
-            <br />
-            Vous devez également mettre un valeur par défaut au paramètre <mark>limit</mark>. Car si l'input n'est pas renseigné cela permet d'éviter que la page soit vide à son chargement ou que l'API ne renvoie une erreur.
             <br /><br />
             Voici l'url : <mark className='cursor-copy' onClick={handleClick}>https://finalspaceapi.com/api/v0/character/?limit={'{number}'}</mark>
           </p>
