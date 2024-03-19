@@ -51,7 +51,7 @@ if (fabrication == "France") {
 }`}
       </FormatToCode>
 
-      <Solution>
+      {/* <Solution>
         <FormatToCode language="jsx">
           {`export default function Exo1() {
   let article = 'Table';
@@ -66,7 +66,7 @@ if (fabrication == "France") {
   );
 }`}
         </FormatToCode>
-      </Solution>
+      </Solution> */}
 
       <div id="2">
         <h2>Projet : Création d'un site</h2>
@@ -87,6 +87,8 @@ if (fabrication == "France") {
           <RequireNotion notion={[6, 8, 13]} />
           <p>
             Créer un composant <mark>Header</mark> qui sera présent sur toutes les pages <u>en l'insérant que dans un seul fichier</u>. Ce composant devra contenir les liens des pages <mark>Accueil</mark> et <mark>A propos</mark>.
+            <br /><br />
+            Pour manipuler le CSS avec les modules, faites en sorte que le composant <mark>Header</mark> ai un fond de couleur noir avec une police de couleur blanche.
           </p>
         </div>
 
@@ -96,7 +98,9 @@ if (fabrication == "France") {
           <p>
             Afficher la liste des personnages dans la page <mark>Accueil</mark> à l'aide d'une API dans un <mark>useEffect</mark>. Chaque objet contient les propriétés suivantes : <mark className='cursor-copy' onClick={handleClick}>id</mark>, <mark className='cursor-copy' onClick={handleClick}>name</mark> pour son nom et <mark className='cursor-copy' onClick={handleClick}>img_url</mark> pour l'url de l'image.
             <br />
-            Voici l'url : <mark className='cursor-copy' onClick={handleClick}>https://finalspaceapi.com/api/v0/character/
+            Vous pouvez faire un <mark>console.log</mark> pour voir les données de votre requête.
+            <br />
+            Voici l'url pour la rêquete : <mark className='cursor-copy' onClick={handleClick}>https://finalspaceapi.com/api/v0/character/
             </mark>
           </p>
         </div>
@@ -104,7 +108,7 @@ if (fabrication == "France") {
         <div>
           <h3>Etape 4</h3>
           <p>
-            Créer un lien sur les personnages pour rediriger vers la page dynamique <mark>personnage</mark>, avec son id dans l'url. Utiliser la méthode des routes dynamique et non pas <mark>#</mark> pour faire la redirection.
+            Créer une redirection pour chaque personnages vers la page dynamique <mark>personnage</mark>, avec son id dans l'url. Utiliser la méthode des routes dynamique et non pas <mark>#</mark> pour faire la redirection.
             <br />
             Ensuite, dans la page <mark>personnage</mark> vous dever afficher :
           </p>
@@ -118,7 +122,7 @@ if (fabrication == "France") {
             <br />
             <u>Attention : Abilitées est un tableau, il peut contenir plusieurs valeurs comme il peut en avoir aucune.</u>
             <br />
-            Voici l'url : <mark className='cursor-copy' onClick={handleClick}>https://finalspaceapi.com/api/v0/character/id</mark>
+            Voici l'url pour la rêquete : <mark className='cursor-copy' onClick={handleClick}>https://finalspaceapi.com/api/v0/character/id</mark>
             <br />
             Remplacer <mark>id</mark> par l'id du personnage lors que de la requête.
           </p>
@@ -130,7 +134,7 @@ if (fabrication == "France") {
           <p>
             Maintenant l'objectif est de limiter le nombre de personnage qui s'affichera dans la page <mark>accueil</mark>. L'API propose cette fonctionnalité grâce au paramètres <mark>?limit={'{number}'}</mark>.
             <br />
-            Pour cela vous devez utiliser un <mark>input</mark> et lorsque l'on écrit dedans, on doit appuyer sur un bouton pour valider la saisie afin de mettre la page à jour avec le nombre de personnage demandé, et cela sans recharger la page.
+            Pour cela vous devez utiliser un <mark>input</mark>. Lorsque l'on écrit dedans, on doit appuyer sur un bouton pour valider la saisie afin de mettre la page à jour avec le nombre de personnage demandé, et cela sans recharger la page.
             <br /><br />
             Vous devez utiliser :
           </p>
@@ -141,7 +145,7 @@ if (fabrication == "France") {
             <li><mark>onClick</mark> pour valider la saisie.</li>
           </ul>
           <p>
-            <br /><br />
+            <br />
             Voici l'url : <mark className='cursor-copy' onClick={handleClick}>https://finalspaceapi.com/api/v0/character/?limit={'{number}'}</mark>
           </p>
         </div>
