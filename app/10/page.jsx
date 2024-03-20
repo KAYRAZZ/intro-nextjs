@@ -4,30 +4,98 @@ const Lesson = () => {
 
   return (
     <div id="1" className="py-5">
-      <h1>Fonction {'map()'}</h1>
-      <h2></h2>
-      <p>
-        La méthode <mark>{'map()'}</mark> en JavaScript est souvent utilisée dans les applications Next.js pour afficher des listes d'éléments. Elle est particulièrement utile lorsque vous travaillez avec des données dynamiques, par exemple des données provenant d'une API.
-      </p>
+      <h1>Les gestionnaires d'événements</h1>
+      <div>
+        <h2>Qu'est-ce qu'un gestionnaire d'événement</h2>
+        <p>
+          Les gestionnaires d'événements sont des fonctions qui sont appelées en réponse à des événements spécifiques dans le navigateur, comme des clics de souris, des pressions de touches, des changements de formulaire, etc.
+        </p>
+      </div>
 
-      <FormatToCode language="jsx">
-        {`export default function Home() {
-  let posts = [ 'post1', 'post2', 'post3' ];
+      <div id="2">
+        <h2>onClick</h2>
+        <p>
+          <mark>onClick</mark> est un gestionnaire d'événement qui est appelé lorsque l'utilisateur clique sur un élément. Voici un exemple d'utilisation avec une fonction fléchée :
+        </p>
+        <FormatToCode language="jsx">
+          {`"use client"
+export default function Page() {
+  return (
+    <button onClick={() => alert('Bouton cliqué!')}>
+      Clique sur moi
+    </button>
+  );
+};`}
+        </FormatToCode>
+        <p>
+          Il est possible de passer une fonction à <mark>onClick</mark> qui sera appelée lorsque l'événement se produit.
+        </p>
+        <FormatToCode language="jsx">
+          {`"use client"
+export default function Page() {
+  function handleClick() {
+    alert('Bouton cliqué!');
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Aller clique ici
+    </button>
+  );
+};`}
+        </FormatToCode>
+        <p>
+          Ici, <mark>handleClick</mark> est une fonction qui est appelée lorsque le bouton est cliqué. La convention veut que les noms des fonctions appelées lors d'un événement, commencent par <mark>handle</mark>.
+          <br /><br />
+          De plus, il est possible de passer des paramètres à la fonction appelée. Pour envoyer une information, <u>une fonction fléchée est obligatoire dans ce cas-là</u>, à l'intérieur du onClick, sinon le code sera directement exécuté au chargement de la page.
+        </p>
+        <FormatToCode language="jsx">
+          {`"use client"
+export default function Page() {
+  function handleClick(text) {
+    alert(text);
+  }
+
   return (
     <div>
-      {posts.map((post, index) => (
-        <div key={index}>
-          <span>{post}</span>
-        </div>
-      ))}
+      // Quand on clique
+      <button onClick={() => handleClick("Salut!")}>
+        Clique et je te dirai quelque chose
+      </button>
+
+      // Quand la page se lance
+      <button onClick={handleClick("Salut!")}>
+        Clique et je te le dirai avant l'autre là
+      </button>
     </div>
   );
-}`}
-      </FormatToCode>
-      <p>
-        Dans cet exemple, nous avons une liste de posts. Nous utilisons la méthode <mark>{'map()'}</mark> pour parcourir chaque élément de la liste et l'afficher. Nous utilisons également la propriété <mark>key</mark> pour chaque élément {'<div>'}. La propriété <mark>key</mark> est utilisée par React pour identifier chaque élément de la liste. <u>Elle doit être unique pour chaque élément de la liste, elle est obligatoire et doit être placer dans l'élément parent.</u>
-      </p>
+};`}
+        </FormatToCode>
+      </div>
 
+      <div id="3">
+        <h2>onChange</h2>
+        <p>
+          <mark>onChange</mark> est un gestionnaire d'événement qui est appelé lorsque la valeur d'un élément change. Très utile lorsqu'on doit récupérer du texte remplis par un utilisateur afin de la placer dans une variable. Voici un exemple d'utilisation avec une fonction fléchée :
+        </p>
+        <FormatToCode language="jsx">
+          {`"use client"
+import { useState } from 'react';
+export default function Page() {
+  const [value, setValue] = useState('');
+  return (
+    <input 
+    type="text"
+    value={value}
+    onChange={(e) => setValue(e.target.value)} 
+    />
+  );
+};`}
+        </FormatToCode>
+        <p>
+          Dans cet exemple, nous avons utilisé le hook <mark>useState</mark> pour créer une variable d'état <mark>value</mark> et une fonction pour la modifier <mark>setValue</mark>. Lorsque l'utilisateur change la valeur de l'élément <mark>input</mark>, la fonction fléchée est appelée et la valeur de l'élément est stockée dans la variable <mark>value</mark>. Les Hooks sont abordés dans la leçon suivante.
+        </p>
+      </div>
     </div>
   );
 }

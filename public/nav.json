@@ -1,7 +1,7 @@
 [
     {
         "title": "Exercices",
-        "lesson": 14,
+        "lesson": 13,
         "subMenus": [
             {
                 "title": "Exercice n°0",
@@ -22,12 +22,8 @@
         "lesson": 1
     },
     {
-        "title": "Pourquoi utiliser Next.js ?",
-        "lesson": 2
-    },
-    {
         "title": "Installer et lancer un projet de Next.js",
-        "lesson": 3,
+        "lesson": 2,
         "subMenus": [
             {
                 "title": "Installer Next.js (ne pas réaliser)",
@@ -45,7 +41,7 @@
     },
     {
         "title": "Les extensions",
-        "lesson": 4,
+        "lesson": 3,
         "subMenus": [
             {
                 "title": "JavaScript",
@@ -63,7 +59,7 @@
     },
     {
         "title": "Utiliser le JSX",
-        "lesson": 5,
+        "lesson": 4,
         "subMenus": [
             {
                 "title": "Les différentes façon d'utiliser le JSX",
@@ -77,7 +73,7 @@
     },
     {
         "title": "Les composants",
-        "lesson": 6,
+        "lesson": 5,
         "subMenus": [
             {
                 "title": "Qu'est-ce qu'un composant",
@@ -91,7 +87,7 @@
     },
     {
         "title": "Créer une page / route",
-        "lesson": 7,
+        "lesson": 6,
         "subMenus": [
             {
                 "title": "Créer une page statique",
@@ -105,7 +101,7 @@
     },
     {
         "title": "Les liens",
-        "lesson": 8,
+        "lesson": 7,
         "subMenus": [
             {
                 "title": "La balise <a>",
@@ -119,7 +115,7 @@
     },
     {
         "title": "Les server/client components",
-        "lesson": 9,
+        "lesson": 8,
         "subMenus": [
             {
                 "title": "Server components",
@@ -137,11 +133,11 @@
     },
     {
         "title": "Fonction map()",
-        "lesson": 10
+        "lesson": 9
     },
     {
         "title": "Les gestionnaires d'événements",
-        "lesson": 11,
+        "lesson": 10,
         "subMenus": [
             {
                 "title": "Qu'est-ce qu'un gestionnaire d'événement",
@@ -159,7 +155,7 @@
     },
     {
         "title": "Les hooks",
-        "lesson": 12,
+        "lesson": 11,
         "subMenus": [
             {
                 "title": "Qu'est-ce qu'un hook",
@@ -177,6 +173,6 @@
     },
     {
         "title": "CSS en Next.js",
-        "lesson": 13
+        "lesson": 12
     }
 ]

@@ -15,14 +15,13 @@ export default function Home() {
           height={500}
           className="m-auto"
         />
-        <span className="text-center m-auto w-full font-bold pb-6">Version Next.js : 14.1</span>
+        <span className="text-center m-auto w-full font-bold pb-6">
+          Version Next.js : 14.1
+        </span>
       </div>
 
       <div>
-        Bonjour à tous, bienvenue dans notre cours sur <mark>Next.js</mark> ! Dans ce cours, nous allons explorer Next.js, qui est un framework de développement web basé sur <mark>React</mark> et qui peut nous aider à créer des applications web modernes, performantes et optimisées. Ce cours comporte plusieurs exercices qui vous fournira des bases et des compétences pratiques pour développer des applications web avec Next.js.
-
-        <br /><br />
-        Note : <u>Cliquer dans les bulles oranges permet de copier</u>
+        Bonjour à tous, bienvenue dans notre cours sur <mark>Next.js</mark> ! Ce cours comporte plusieurs exercices qui vous fournira des bases et des compétences pratiques pour développer des applications web avec Next.js.
       </div>
     </>
   );

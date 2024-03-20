@@ -1,75 +1,43 @@
-"use client"
-import Image from 'next/image';
+import FormatToCode from '../components/FormatToCode';
 
 const Lesson = () => {
 
-    const handleClick = (event) => {
-        navigator.clipboard.writeText(event.target.innerText)
-            .then(() => {
-                console.log('Text copied to clipboard');
-            })
-            .catch(err => {
-                console.error('Could not copy text: ', err);
-            });
-    }
-
     return (
         <div id="1" className="py-5">
-            <h1>Installer et lancer un projet de Next.js</h1>
+            <h1>Les extensions</h1>
             <div>
-                <h2>Installer Next.js (à ne pas réaliser)</h2>
+                <h2>JavaScript</h2>
                 <p>
-                    Les fichiers vous sont déjà fournis car l'installation prendrait trop de temps. Voici tout de même comment l’installer. <u>Attention où vous placez le dossier car Next.js ne supporte pas les espaces dans les chemins.</u> Pour installer un projet Next.js, il faut au préalable <mark>Node.js, React, Next.js</mark> d'installé sur votre machine.
-                    <br />
-                    Ensuite, dans un terminal tapez la commande suivante : <mark className='cursor-copy' onClick={handleClick}>npx create-next-app {'<nom-du-projet>'}</mark>. Cette commande va créer un nouveau dossier avec le nom que vous avez spécifié, et y installer tous les fichiers nécessaires pour démarrer un projet Next.js.
+                    JavaScript {"(JS)"} est un langage de programmation utilisé pour créer du contenu dynamique sur les sites web. Il est largement utilisé pour manipuler le DOM, gérer les événements, créer des animations, effectuer des requêtes HTTP, et bien plus encore.
+                    <br /><br />
+                    Voici un exemple simple de JavaScript qui crée un élément h1, lui ajoute du texte, puis l'ajoute au corps de la page.
                 </p>
-                <Image
-                    src="/createProject.png"
-                    alt="Next.js installation"
-                    width={700}
-                    height={700}
-                    className='m-auto mt-6'
-                />
-
+                <FormatToCode language="js">
+                    {`const h1 = document.createElement('h1');
+h1.textContent = 'Hello World!';
+document.body.appendChild(h1);`}
+                </FormatToCode>
             </div>
-
             <div id="2">
-                <h2>Lancer un projet Next.js</h2>
+                <h2>JSX</h2>
                 <p>
-                    A partir du terminal, placez vous à la racine du projet Next.js et taper la commande suivante, qui démarrera le projet <mark className='cursor-copy' onClick={handleClick}>npm run dev</mark>. Vous verrez des messages dans votre terminal indiquant que le serveur est en cours de démarrage et la disponibilité de l'application.
-                    Une fois que le serveur de développement est démarré avec succès, ouvrez votre navigateur web et accédez à l'URL suivante <mark className='cursor-copy' onClick={handleClick}>http://localhost:3000</mark>.
+                    JSX {"(JavaScript XML)"}, quant à lui, est une extension de syntaxe pour JavaScript. Il est principalement utilisé avec React, une bibliothèque JavaScript pour la construction d'interfaces utilisateur. JSX ressemble à HTML, mais il est intégré dans du JavaScript. Cela permet aux développeurs d'écrire des balises et des composants HTML-like directement dans leur code JavaScript.
                     <br /><br />
-                    Par défaut, c’est le port <mark>3000</mark> qui est utilisé. Cependant, si ce port est déjà utilisé par une autre application sur votre machine, Next.js utilisera le port suivant disponible. Vous pouvez également spécifier un port différent en utilisant l'option <mark className='cursor-copy' onClick={handleClick}>npx next dev -p {'<port>'}</mark>.
-                    <br /><br />
-                    Pendant que le serveur de développement est en cours d'exécution, toute modification que vous apportez à votre code sera automatiquement détectée et votre application sera rechargée automatiquement dans le navigateur, vous permettant de voir les modifications en direct.
-                    Pour arrêter le serveur de développement, revenez dans votre terminal et utilisez la combinaison de touches <mark>Ctrl + C</mark>.
-
+                    Voici le même exemple qu'au dessus mais avec du JSX.
                 </p>
+                <FormatToCode language="jsx">
+                    {"return <h1>Hello World!</h1>;"}
+                </FormatToCode>
             </div>
-
-            <div id="3">
-                <h2>Arborescence</h2>
+            <div>
+                <h2 id="3">La différence entre JS et JSX</h2>
                 <p>
-                    L'arborescence d'un projet <mark>Next.js</mark> est composée de plusieurs dossiers et fichiers. Voila les éléments principaux :
+                    La différence entre les extensions de fichiers <mark>js</mark> et <mark>jsx</mark> réside en partie dans la façon dont le code est traité par les outils de développement.
                     <br /><br />
+                    Mais aussi, l'utilisation de l'extension <mark>.jsx</mark> peut aider à indiquer clairement que le fichier contient du JSX, ce qui peut rendre votre code plus facile à comprendre pour d'autres développeurs.
+                    <br /><br />
+                    Bien qu'il soit préférable de nommer vos fichiers contenant du JSX avec l'extension <mark>.jsx</mark> pour éviter les erreurs potentielles, le choix entre les deux extensions devient une question de préférence personnelle et des conventions de votre équipe de développement.
                 </p>
-                <ul className='space-y-2'>
-                    <li>
-                        <mark>/app</mark> : C'est dans ce dossier où vous aller principalement travailler.
-                    </li>
-                    <li>
-                        <mark>/app/page.js</mark> : C'est le fichier qui contiendra le contenu de votre page web situé à la racine de votre site.
-                    </li>
-                    <li>
-                        <mark>/app/layout.js</mark> : C'est le fichier qui contiendra la structure de votre site.
-                    </li>
-                    <li>
-                        <mark>/public</mark> : Ce répertoire est utilisé pour servir des fichiers statiques. Tel que les images et les feuilles de style.
-                    </li>
-                    <li>
-                        <mark>package.json</mark> : C'est le fichier de configuration de votre projet. Il contient des informations sur votre projet, telles que les dépendances, les scripts, etc.
-                    </li>
-                </ul>
             </div>
         </div>
     );
