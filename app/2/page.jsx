@@ -15,9 +15,9 @@ const Lesson = () => {
 
     return (
         <div id="1" className="py-5">
-            <h1>Installer et lancer un projet de Next.js</h1>
+            <h1>Créer et lancer un projet de Next.js</h1>
             <div>
-                <h2>Installer Next.js (à ne pas réaliser)</h2>
+                <h2>Créer un projet Next.js (à ne pas réaliser)</h2>
                 <p>
                     Les fichiers vous sont déjà fournis car l'installation mettrai en feu la connexion. Voici tout de même comment l’installer. <u>Attention où vous placez le dossier car Next.js ne supporte pas les espaces dans les chemins.</u> Pour installer un projet Next.js, il faut au préalable <mark>Node.js, React, Next.js</mark> d'installé sur votre machine.
                     <br />
