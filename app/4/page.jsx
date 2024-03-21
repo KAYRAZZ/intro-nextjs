@@ -48,7 +48,7 @@ const Lesson = () => {
 }`}
         </FormatToCode>
         <p>
-          Dans du code JSX, <u>il est obligatoire d'avoir un élément parent</u>, qui, dans cette exemple, est représenté par <mark>{"<> </>"}</mark>. Noter que nous avons utilisé <mark>{"<> </>"}</mark> pour englober les éléments, c'est une syntaxe raccourcie pour éviter d'avoir à définir un élément HTML dans le code HTML. Vous pouvez également utiliser <mark>{"<div>"}</mark> ou tout autre élément HTML à la place. Ce qui signifie que dans cette exemple, dans le code HTML, il n'y aura que la balise <mark>{"<h1>"}</mark> et les deux balises <mark>{"<h2>"}</mark> et non pas un élément <mark>{"<div>"}</mark> qui englobe ces trois balises.
+          Dans du code JSX, <u>il est obligatoire d'avoir un élément parent</u>, qui, dans cet exemple, est représenté par <mark>{"<> </>"}</mark>. Noter que nous avons utilisé <mark>{"<> </>"}</mark> pour englober les éléments, c'est une syntaxe raccourcie pour éviter d'avoir à définir un élément HTML dans le code HTML. Vous pouvez également utiliser <mark>{"<div>"}</mark> ou tout autre élément HTML à la place. Ce qui signifie que dans cette exemple, dans le code HTML, il n'y aura que la balise <mark>{"<h1>"}</mark> et les deux balises <mark>{"<h2>"}</mark> et non pas un élément <mark>{"<div>"}</mark> qui englobe ces trois balises.
         </p>
       </div>
 
@@ -101,7 +101,7 @@ const Lesson = () => {
 }`}
         </FormatToCode>
         <p>
-          Dans cette exemple, l'expression JSX affiche le nom de famille si la constante <mark>lastName</mark> est définie. Cela fonctionne si <mark>lastName</mark> est une chaîne de caractères non vide, un nombre différent de 0, un objet, etc. L'opérateur <mark className="font-sans">&&</mark> est utilisé pour afficher un élément si une condition est vraie, il n'y a pas de <mark>else</mark>.
+          Dans cet exemple, l'expression JSX affiche le nom de famille si la constante <mark>lastName</mark> est définie. Cela fonctionne si <mark>lastName</mark> est une chaîne de caractères non vide, un nombre différent de 0, un objet, etc. L'opérateur <mark className="font-sans">&&</mark> est utilisé pour afficher un élément si une condition est vraie, il n'y a pas de <mark>else</mark>.
         </p>
       </div>
     </div>

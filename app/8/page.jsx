@@ -31,7 +31,7 @@ const Lesson = () => {
             <div id="2">
                 <h2>Client components</h2>
                 <p>
-                    Les Client Components sont des composants qui sont rendus côté client. Ils sont utilisés pour les pages qui changent souvent. Les Client Components vous permettent de faire des interfaces utilisateur interactive.
+                    Les Client Components sont des composants qui sont rendus côté client. Ils sont utilisés pour les pages qui changent souvent. Les Client Components vous permettent de faire des interfaces utilisateur intéractives.
                 </p>
                 <FormatToCode language="jsx">
                     {`"use client"

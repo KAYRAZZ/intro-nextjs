@@ -37,7 +37,7 @@ const Lesson = () => {
         <p>
           Noter également que <mark>{'<MonBouton />'}</mark> est <u>auto-fermante</u>, c'est-à-dire qu'il n'a pas de balise de fermeture.
           <br /><br />
-          Il faut également exporter le composant pour pouvoir l'utiliser. Pour ce faire, il existe deux facon de le faire. La première est de déclarer une fonction et de l'exporter à la fin du fichier. La deuxième est de déclarer une fonction et de l'exporter directement.
+          Il faut également exporter le composant pour pouvoir l'utiliser. Pour ce faire, il existe deux façons de le faire. La première est de déclarer une fonction et de l'exporter à la fin du fichier. La deuxième est de déclarer une fonction et de l'exporter directement.
         </p>
 
         <FormatToCode language="jsx">

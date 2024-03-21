@@ -18,7 +18,7 @@ const Exercice = () => {
       <h1>Exercices</h1>
       <h2></h2>
       <p>
-        Le principe est simple, il faut se renseigner sur les notions prérequises avant de réaliser l'exercice. Certaines notions sont de nouveau nécéssaires pour certains exercices, mais ne sont pas indiqués dans les prérequis. Il faut donc faire les exercices dans l'ordre.
+        Le principe est simple, il faut se renseigner sur les notions pré-requises avant de réaliser l'exercice. Certaines notions sont de nouveau nécessaires pour certains exercices, mais ne sont pas indiquées dans les pré-requis. Il faut donc faire les exercices dans l'ordre.
       </p>
       <div>
         <h2>Exercice N°0</h2>
@@ -71,7 +71,7 @@ if (fabrication == "France") {
       <div id="2">
         <h2>Projet : Création d'un site</h2>
         <p>
-          Le but est de créer un site d'affiche de personnage de la série <mark>Final Space</mark>. La page d'accueil devra afficher une liste des personnages. Lorsque l'on clique sur un personnage, on est redirigé vers une page qui affichera les détails de ce dernier. Pour cela on utilisera une API qui nous renverra les données des personnages.
+          Le but est de créer un site d'affiche de personnage de la série <mark>Final Space</mark>. La page d'accueil devra afficher une liste des personnages. Lorsque l'on clique sur un personnage, on est redirigé vers une page qui affichera les détails de ce dernier. Pour cela, on utilisera une API qui nous renverra les données des personnages.
           {/* <br /><br />
           Vous n'avez pas besoin de vous renseigner sur l'API mais pour ceux qui veulent aller jeter un oeil : <a href="https://finalspaceapi.com/docs/endpoints/character/" target="_blank" rel="noreferrer" className="underline text-blue-300">Final Space API</a> */}
         </p>
@@ -96,7 +96,7 @@ if (fabrication == "France") {
           <h3>Etape 3</h3>
           <RequireNotion notion={[8, 9, 11]} />
           <p>
-            Afficher la liste des personnages dans la page <mark>Accueil</mark> à l'aide d'une API dans un <mark>useEffect</mark>. Chaque objet que l'API retrournera, contient les propriétés suivantes : <mark className='cursor-copy' onClick={handleClick}>id</mark>, <mark className='cursor-copy' onClick={handleClick}>name</mark> pour son nom et <mark className='cursor-copy' onClick={handleClick}>img_url</mark> pour l'url de l'image.
+            Afficher la liste des personnages dans la page <mark>Accueil</mark> à l'aide d'une API dans un <mark>useEffect</mark>. Chaque objet que l'API retournera, contient les propriétés suivantes : <mark className='cursor-copy' onClick={handleClick}>id</mark>, <mark className='cursor-copy' onClick={handleClick}>name</mark> pour son nom et <mark className='cursor-copy' onClick={handleClick}>img_url</mark> pour l'url de l'image.
             <br />
             Vous pouvez faire un <mark>console.log</mark> pour voir les données que l'API retourne.
             <br />
@@ -116,15 +116,15 @@ if (fabrication == "France") {
             <li>Nom : <mark className='cursor-copy' onClick={handleClick}>name</mark></li>
             <li>Image : <mark className='cursor-copy' onClick={handleClick}>img_url</mark></li>
             <li>Origine : <mark className='cursor-copy' onClick={handleClick}>origin</mark></li>
-            <li>Abilitées : <mark className='cursor-copy' onClick={handleClick}>abilities</mark></li>
+            <li>Habilitées : <mark className='cursor-copy' onClick={handleClick}>abilities</mark></li>
           </ul>
           <p>
             <br />
-            <u>Attention : Abilitées est un tableau, il peut contenir plusieurs valeurs comme il peut en avoir aucune.</u>
+            <u>Attention : Habilitées est un tableau, il peut contenir plusieurs valeurs comme il peut en avoir aucune.</u>
             <br />
             Voici l'url pour la rêquete : <mark className='cursor-copy' onClick={handleClick}>https://finalspaceapi.com/api/v0/character/id</mark>
             <br />
-            Remplacer <mark>id</mark> par l'id du personnage lors que de la requête.
+            Remplacer <mark>id</mark> par l'id du personnage lorsque de la requête.
           </p>
         </div>
 
@@ -132,9 +132,9 @@ if (fabrication == "France") {
           <h3>Etape 5</h3>
           <RequireNotion notion={[10]} />
           <p>
-            Maintenant l'objectif est de limiter le nombre de personnage qui s'affichera dans la page <mark>accueil</mark>. L'API propose cette fonctionnalité grâce au paramètres <mark>?limit={'{number}'}</mark>.
+            Maintenant l'objectif est de limiter le nombre de personnages qui s'affichera dans la page <mark>accueil</mark>. L'API propose cette fonctionnalité grâce au paramètre <mark>?limit={'{number}'}</mark>.
             <br />
-            Pour cela vous devez utiliser un <mark>input</mark>. Lorsque l'on écrit dedans, on doit appuyer sur un bouton pour valider la saisie afin de mettre la page à jour avec le nombre de personnage demandé, et cela sans recharger la page.
+            Pour cela, vous devez utiliser un <mark>input</mark>. Lorsque l'on écrit dedans, on doit appuyer sur un bouton pour valider la saisie afin de mettre la page à jour avec le nombre de personnages demandé, et cela sans recharger la page.
             <br /><br />
             Vous devez utiliser :
           </p>

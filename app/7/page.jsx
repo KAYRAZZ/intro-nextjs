@@ -14,7 +14,7 @@ const Lesson = () => {
       <div id="2">
         <h2>La balise {`<Link>`}</h2>
         <p>
-          Le composant <mark>{`<Link>`}</mark> est spécifique à Next.js. Il permet une navigation entre les pages de votre application Next.js sans recharger la page. Cela donne une expérience utilisateur très fluide et rapide, car <u>seule la partie de la page qui change est mise à jour</u>. La route de la page est spécifié dans l'attribut <mark>href</mark> de la balise <mark>Link</mark>, elle correspond au nom du dossier qui contient le fichier <mark>page</mark>. <u>N'oubliez pas d'importer cette fonctionnalité.</u>
+          Le composant <mark>{`<Link>`}</mark> est spécifique à Next.js. Il permet une navigation entre les pages de votre application Next.js sans recharger la page. Cela donne une expérience utilisateur très fluide et rapide, car <u>seule la partie de la page qui change est mise à jour</u>. La route de la page est spécifiée dans l'attribut <mark>href</mark> de la balise <mark>Link</mark>, elle correspond au nom du dossier qui contient le fichier <mark>page</mark>. <u>N'oubliez pas d'importer cette fonctionnalité.</u>
         </p>
       </div>
       <FormatToCode language="jsx">

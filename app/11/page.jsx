@@ -40,7 +40,7 @@ const Lesson = () => {
       <div>
         <h2>Qu'est-ce qu'un hook</h2>
         <p>
-          Un Hook est une fonction spéciale qui vous permet d'utiliser les fonctionnalités de React à partir de composants fonctionnels. Il existe plusieurs Hooks, parmis les plus utilisés, il y a <mark>useState</mark> et <mark>useEffect</mark>.
+          Un Hook est une fonction spéciale qui vous permet d'utiliser les fonctionnalités de React à partir de composants fonctionnels. Il existe plusieurs Hooks, parmi les plus utilisés, il y a <mark>useState</mark> et <mark>useEffect</mark>.
 
           <br /><br />
           Mais il y a un élément à prendre en compte, le <mark>render</mark>. Le render {"(ou 'rendu' en français)"} est un concept central en React. Il s'agit du processus par lequel React met à jour le DOM de la page web avec le contenu de vos composants.

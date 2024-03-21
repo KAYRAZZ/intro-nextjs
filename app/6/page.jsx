@@ -8,7 +8,7 @@ const Lesson = () => {
             <div>
                 <h2>Créer une page statique</h2>
                 <p>
-                    Dans Next.js, la création de pages suit une approche particulière. Pour ce faire, il faut créer un dossier, à l'intérieur de <mark>/app</mark>, qui <u>portera le nom de la route dans l'URL</u>, et à l'intérieur de ce dossier, créer un fichier nommé <mark>page.jsx</mark> ou <mark>page.js</mark>, c'est ce fichier qui rendrera le contenu de la page. <u>Nommer ce fichier différemment, fera que cette page sera inatteignable.</u>
+                    Dans Next.js, la création de pages suit une approche particulière. Pour ce faire, il faut créer un dossier, à l'intérieur de <mark>/app</mark>, qui <u>portera le nom de la route dans l'URL</u>, et à l'intérieur de ce dossier, créer un fichier nommé <mark>page.jsx</mark> ou <mark>page.js</mark>, c'est ce fichier qui rendra le contenu de la page. <u>Nommer ce fichier différemment, fera que cette page sera inatteignable.</u>
                     <br /><br />
                     Noter que les fichiers <mark>page.jsx</mark> ou <mark>page.js</mark> doivent être exportés par défaut. Vous pouvez nommer la fonction à votre sauce, elle n'a aucune importance.
                 </p>
