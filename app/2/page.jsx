@@ -19,7 +19,7 @@ const Lesson = () => {
             <div>
                 <h2>Créer un projet Next.js (à ne pas réaliser)</h2>
                 <p>
-                    Les fichiers vous sont déjà fournis car l'installation mettrai en feu la connexion. Voici tout de même comment l’installer. <u>Attention où vous placez le dossier car Next.js ne supporte pas les espaces dans les chemins.</u> Pour installer un projet Next.js, il faut au préalable <mark>Node.js, React, Next.js</mark> d'installé sur votre machine.
+                    Les fichiers vous sont déjà fournis car l'installation mettrait en feu la connexion. Voici tout de même comment l’installer. <u>Attention où vous placez le dossier car Next.js ne supporte pas les espaces dans les chemins.</u> Pour installer un projet Next.js, il faut au préalable <mark>Node.js, React, Next.js</mark> d'installé sur votre machine.
                     <br />
                     Ensuite, dans un terminal tapez la commande suivante : <mark className='cursor-copy' onClick={handleClick}>npx create-next-app {'<nom-du-projet>'}</mark>. Cette commande va créer un nouveau dossier avec le nom que vous avez spécifié, et y installer tous les fichiers nécessaires pour démarrer un projet Next.js. Plusieurs questions vous seront posées, répondez-y en fonction de vos besoins.
                 </p>
