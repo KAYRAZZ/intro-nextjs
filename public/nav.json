@@ -22,11 +22,11 @@
         "lesson": 1
     },
     {
-        "title": "Installer et lancer un projet de Next.js",
+        "title": "Créer et lancer un projet de Next.js",
         "lesson": 2,
         "subMenus": [
             {
-                "title": "Installer Next.js (ne pas réaliser)",
+                "title": "Créer un projet Next.js (ne pas réaliser)",
                 "lesson": 1
             },
             {
